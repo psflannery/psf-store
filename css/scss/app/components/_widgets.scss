@@ -1,0 +1,30 @@
+//
+// Widgets
+// --------------------------------------------------
+
+.widget-area .widget {
+	padding-bottom: $spacer;
+}
+.widget--col {
+	&:first-of-type {
+		padding-left: $grid-gutter-width/2 !important;
+	}
+	&:last-of-type {
+		padding-right: $grid-gutter-width/2 !important;
+	}
+	.footer-widgets & {
+		border-right: none;
+	}
+	@include media-breakpoint-up(md) {
+		border-right: $border-width solid $border-color;
+		&:last-of-type {
+			border-right: none;
+		}
+	}
+}
+.widget--row {
+	border-bottom: $border-width solid $border-color;
+	&:last-of-type {
+		border-bottom: none;
+	}
+}

@@ -1,0 +1,46 @@
+//
+// Infinite scroll
+// --------------------------------------------------
+
+// Globally hidden elements when Infinite Scroll is supported and in use.
+.infinite-scroll .paging-navigation, // Older / Newer Posts Navigation (always hidden)
+.infinite-scroll .pagination,
+.infinite-scroll .woocommerce-pagination,
+.infinite-scroll ul.products + .storefront-sorting,
+.infinite-scroll .woocommerce-result-count,
+.infinite-scroll.neverending .site-footer,
+.infinite-scroll .storefront-sorting { // Theme Footer (when set to scrolling)
+	display: none;
+}
+
+// When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before.
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+// Override default loader positioning.
+.infinite-loader {
+	display: flex;
+	justify-content: center;
+}
+
+// Override default button styles.
+#infinite-handle{
+	display: flex;
+	justify-content: center;
+	span {
+		background: transparent;
+		border-radius: 0;
+		color: inherit;
+		cursor: pointer;
+		font-size: inherit;
+		padding: $spacer;
+	}
+}
+
+#infinite-handle span button,
+#infinite-handle span button:hover,
+#infinite-handle span button:focus {
+	@extend .btn;
+	@extend .btn-outline-secondary;
+}

@@ -1,0 +1,85 @@
+//
+// Icons
+// --------------------------------------------------
+
+.icon {
+	@include size($icon-size-base);
+	vertical-align: middle;
+	fill: $icon-color;
+	@include hover-focus {
+		fill: $icon-active-color;
+	}
+	&.disabled {
+		color: $icon-disabled-color;
+	}
+}
+
+.hamburger__line {
+    // https://codepen.io/RRoberts/
+    width: $hamburger-line-width;
+    height: $hamburger-line-height;
+    background-color: $hamburger-line-color;
+    display: block;
+    margin: $hamburger-line-spacing auto;
+    transition: all 0.3s ease-in-out;
+    will-change: transform;
+    .active & {
+        &:nth-child(1){
+           transform: translateY($hamburger-line-height + $hamburger-line-spacing) rotate(45deg);
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:nth-child(3){
+            transform: translateY(-($hamburger-line-height + $hamburger-line-spacing)) rotate(-45deg);
+        }
+    }
+}
+.woocommerce-product-gallery__trigger {
+    position: absolute;
+    right: $spacer;
+    @include size( $spacer * 2 );
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//
+// Sharing Buttons
+// --------------------------------------------------
+
+.sd-content ul li {
+    margin-bottom: 0 !important;
+}
+
+// Ugh, need to go mega specific to override. Is it really better to disable all styles and 
+// start again. Do we miss out on the outsourcing?
+.sd-social-icon .sd-content ul li[class*='share-'] a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-facebook a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-twitter a.sd-button.share-icon.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-pinterest a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-digg a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-press-this a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-telegram a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-linkedin a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-google-plus-1 a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-pocket a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-reddit a.sd-button.share-icon,
+.sd-social-icon .sd-content ul li[class*='share-'].share-skype a.sd-button.share-icon {
+    background: transparent !important;
+    color: $body-color !important;
+    margin-top: 0;
+}
+.share-icon {
+    margin-left: -7px; // magic number inherited from jetpack css
+}
+div.sharedaddy h3.sd-title {
+    color: $text-muted !important;
+    font-weight: $font-weight-normal !important;
+    font-size: $font-size-sm !important;
+    margin-bottom: 0 !important;
+    &:before {
+        content: none !important;
+    }
+}

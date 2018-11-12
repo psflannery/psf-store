@@ -1,0 +1,119 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$letter-spacer-wide                       : 0.1em;
+
+$font-weight-semi-bold                    : 500;
+
+// Icons
+$icon-color                               : $black; //$navbar-light-color;
+$icon-active-color                        : rgba($black, .5); //$navbar-light-active-color;
+$icon-disabled-color                      : $navbar-light-disabled-color;
+
+$icon-size-sm                             : 1rem;
+$icon-size-base                           : 1.25rem;
+
+// Components
+$border-color-dark                        : $dark;
+
+$page-shadow                              : 0 0 $spacer 0 rgba($black, .15);
+
+// Hamburger
+$hamburger-line-width                     : 1.5rem;
+$hamburger-line-height                    : 0.1rem;
+$hamburger-line-spacing                   : 0.4rem;
+$hamburger-line-color                     : $icon-color;
+
+// Sale flash
+$sale-flash-padding-x                     : 0.75em;
+$sale-flash-padding-y                     : 0.4em;
+$sale-flash-letter-spacing                : 3px;
+
+// Star rating
+$star-rating-height 					  : 1.5rem * 0.8;
+$star-rating-width  		     		  : 5.3em;
+$star-rating-font-family                  : 'star';
+$star-size                                : 1em;
+$star-color-selected                      : $gray-700; //theme-color('primary');
+$star-color-unselected                    : $gray-600; //theme-color('secondary');
+$star-opacity-selected                    : 1;
+$star-opacity-unselected                  : 0.25;
+
+// Site header
+$header-nav-padding-x                     : $spacer / 2;
+
+// Main menu
+$menu-triangle-size                       : 15px;
+$menu-triangle-position-top               : 0; //$navbar-padding-y;
+$menu-triangle-position-left              : $navbar-nav-link-padding-x;
+$menu-z-index                             : 1;
+
+// Offcanvas menu
+$offcanvas-width                          : 100%;
+
+// Inputs
+$product-quantity-width                   : 2rem; //4rem;
+
+// Slider
+$slider-track-height                      : 2px;  //.25em;
+$slider-track-color-active                : $body-color; //theme-color("primary");
+$slider-track-color                       : gray("200"); //rgba($body-color, 0.1);
+$slider-handle-size                       : 1.25rem;
+$slider-handle-color                      : $white; //theme-color("primary");
+$slider-handle-border-color               : gray("400");
+
+// Contact form
+$contact-form-height                      : 10rem;
+
+// Shopping cart widget
+$shopping-cart-widget-min-width 		  : 400px; //350px;
+//$shopping-cart-widget-triangle-size       : 10px;
+$widget-cart-content-px                   : 1rem;
+$widget-cart-content-py                   : 3rem;
+$widget-cart-content-pt                   : 2.5rem;
+$widget-cart-content-pb                   : 1rem;
+
+$widget-cart-component-ease-in            : cubic-bezier(0.2, 1, 0.3, 1);
+$widget-cart-transition-timing            : 0.6s;
+
+$widget-cart-btn-size                     : ($header-nav-padding-x * 2) + $icon-size-base;
+$widget-cart-btn-translate-x              : calc(-#{$shopping-cart-widget-min-width} + #{$widget-cart-btn-size + $widget-cart-content-px/2});
+
+$widget-cart-count-size                   : 1.2rem;
+$widget-cart-count-offset                 : -4px;
+$widget-cart-max-height                   : 300px;
+
+// Flickity
+$flkty-icon-color                         : $icon-color; //$gray-600;
+
+$flkty-btn-bg-color                       : hsla(0, 0%, 100%, 0.75);
+$flkty-btn-bg-color-hover                 : $white;
+$flkty-btn-color                          : $flkty-icon-color;
+$flkty-btn-focus-color                    : 0 0 0 5px #19F;
+$flkty-btn-active-opacity                 : 0.6;
+$flkty-btn-disabled-opacity               : 0;
+$flkty-btn-icon-color                     : $flkty-icon-color;
+$flkty-btn-size                           : 2.5rem;
+$flkty-btn-size-sm                        : 1.5rem;
+$flkty-btn-size-md                        : 2rem;
+$flkty-btn-offset                         : $spacer;
+$flkty-btn-wrap-offset                    : $flkty-btn-size;
+$flkty-btn-wrap-offset-sm                 : 1.5rem;
+$flkty-btn-wrap-offset-md                 : 0.5rem;
+$flkty-btn-wrap-offset-lg                 : 1rem;
+$flkty-btn-icon-offset                    : 20%;
+$flkty-btn-icon-size                      : 60%;
+
+$flkty-dots-offset-bottom                 : $spacer;
+$flkty-dots-offset-right                  : $spacer;
+$flkty-dots-size                          : 10px;
+$flkty-dots-spacer                        : $spacer / 4;
+$flkty-dots-color                         : $flkty-icon-color;
+$flkty-dots-opacity                       : 0.25;
+$flkty-dots-opacity-selected              : 1;

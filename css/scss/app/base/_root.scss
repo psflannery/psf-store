@@ -1,0 +1,21 @@
+//
+// Root
+// --------------------------------------------------
+
+html {
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+	@extend .img-fluid;
+}
+
+iframe {
+	width: 100%;
+}
+
+label {
+	font-size: $font-size-sm;
+}

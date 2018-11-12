@@ -1,0 +1,26 @@
+//
+// Select 2 - overrides
+// --------------------------------------------------
+
+// Select 2 overides
+.select2-container--default .select2-selection--single {
+    border: $input-border-width solid $input-border-color;
+    border-radius: 0px;
+}
+.select2-container .select2-selection--single {
+    height: auto;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+	padding-top: $input-padding-y;
+	padding-bottom: $input-padding-y;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    @include size(1rem);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.select2-dropdown {
+    border: $input-border-width solid $input-border-color;
+    border-radius: 0px;
+}

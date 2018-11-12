@@ -1,0 +1,23 @@
+//
+// Product Search
+// --------------------------------------------------
+
+/*
+.search-toggle .form-control {
+	visibility: hidden;
+	opacity: 0;
+	transition-delay: 0.1s;
+    transition: opacity 0.1s cubic-bezier(.4,0,.2,1), visibility 0.1s;
+}
+.search-toggle.in .form-control {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.1s cubic-bezier(.4,0,.2,1);
+	z-index: 99;
+}
+
+.site-header .search-toggle {
+	position: absolute;
+	bottom: 0;
+}
+*/

@@ -1,0 +1,79 @@
+//
+// Bootstrap Overrides
+// --------------------------------------------------
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded:   false;
+//$enable-gradients: true;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 720px,
+  md: 840px,
+  lg: 960px,
+  xl: 1180px,
+);
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:      'Montserrat', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+//$font-family-sans-serif-alt:  'Montserrat', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            600;
+
+$h1-font-size:                $font-size-base * 2;
+$h2-font-size:                $font-size-base * 1.5;
+$h3-font-size:                $font-size-base * 1.333;
+$h4-font-size:                $font-size-base * 1.25;
+$h5-font-size:                $font-size-base * 1.1;
+$h6-font-size:                $font-size-base;
+
+//$headings-font-family:        $font-family-sans-serif-alt;
+$headings-font-weight:        600;
+
+// Navbar
+
+$navbar-nav-link-padding-x:         1.5rem;
+
+$navbar-toggler-padding-y:          0.75rem;
+$navbar-toggler-padding-x:          0.5rem;
+
+$navbar-light-color:                #000; //rgba($black, .5);
+
+// Cards
+$card-border-color:                 transparent;
+$card-cap-bg:                       #fff;
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$zindex-dropdown:                   1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-modal-backdrop:             1040;
+$zindex-offcanvas-backdrop:         $zindex-modal-backdrop;
+$zindex-modal:                      1050;
+$zindex-popover:                    1060;
+$zindex-tooltip:                    1070;
+
+// Close
+$close-font-weight:                 400;
+
+// Tooltips
+$tooltip-font-size:                 0.75rem;

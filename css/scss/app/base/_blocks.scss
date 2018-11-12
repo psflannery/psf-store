@@ -1,0 +1,15 @@
+//
+// Blocks
+// --------------------------------------------------
+
+.alignfull {
+  @include alignfull();
+}
+.alignwide {
+  @include alignwide();
+}
+.alignfull img,
+.alignwide img {
+  display: block;
+  margin: 0 auto;
+}

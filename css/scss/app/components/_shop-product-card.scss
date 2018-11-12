@@ -1,0 +1,27 @@
+//
+// Shop Product Card
+// --------------------------------------------------
+
+.card-img-top {
+	background-color: $gray-200;
+	position: relative;
+	> img {
+		width: 100%;
+	}
+}
+.card-img-top .wp-post-image,
+.card-img-top img {
+	transition: opacity 0.25s 0.5s ease;
+	opacity: 0;
+	&.jetpack-lazy-image--handled {
+		opacity: 1;
+	}
+}
+
+.card-body .woocommerce-loop-product__title {
+	font-size: $small-font-size;
+	font-weight: $font-weight-normal;
+}
+.products--carousel .card-body {
+	display: none;
+}

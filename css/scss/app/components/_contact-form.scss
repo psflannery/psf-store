@@ -1,0 +1,24 @@
+//
+// Contact Form
+// --------------------------------------------------
+
+.contact-form {
+	.form-group input,
+	.form-group textarea {
+		@extend .form-control;
+	}
+	.form-group textarea {
+		height: $contact-form-height;
+	}
+}
+.contact-submit {
+	.pushbutton-wide {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+}
+/*
+.grunion-field-label {
+	color: $text-muted;
+	font-size: $small-font-size;
+} */

@@ -1,0 +1,31 @@
+//
+// Site header
+// --------------------------------------------------
+
+.site-branding {
+	@include media-breakpoint-up(md) {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.site-header [type="search"] {
+	border: 0;
+	//border-bottom: $border-width solid theme-color("dark");
+}
+
+.site-header__nav-top-container {
+	@include media-breakpoint-down(sm) {
+		margin-left: auto;
+	}
+	@include media-breakpoint-up(md) {
+		width: 100%;
+	}
+	.menu-info {
+		margin-left: -$header-nav-padding-x;
+	}
+	.nav-link {
+		padding-left: $header-nav-padding-x;
+		padding-right: $header-nav-padding-x;
+	}
+}

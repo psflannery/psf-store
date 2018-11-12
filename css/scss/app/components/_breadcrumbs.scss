@@ -1,0 +1,15 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+.header-promo + nav .breadcrumb {
+	border-top-width: 0 !important;
+}
+.breadcrumb-item {
+	&:before {
+		color: $gray-500 !important;
+	}
+	a {
+		color: $body-color;
+	}
+}

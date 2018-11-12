@@ -1,0 +1,21 @@
+//
+// Shop checkout
+// --------------------------------------------------
+
+.payment_box {
+	p {
+		margin-bottom: 0;
+	}
+}
+.woocommerce-privacy-policy-text {
+	font-size: $small-font-size;
+	color: $text-muted;
+	border-top: $border-width solid theme-color('light');
+	border-bottom: $border-width solid theme-color('light');
+	padding-top: $spacer;
+	padding-bottom: $spacer;
+	margin-bottom: $spacer;
+	p {
+		margin-bottom: 0;
+	}
+}

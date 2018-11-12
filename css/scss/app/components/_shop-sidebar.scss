@@ -1,0 +1,54 @@
+//
+// Shop sidebar
+//
+// Widget styles specific to the shop sidebar.
+// --------------------------------------------------
+
+.sidebar {
+	.widget-title {
+		margin-bottom: 1.2rem;
+		font-weight: $font-weight-normal;
+		//color: #868e96;
+		text-transform: uppercase;
+		letter-spacing: $letter-spacer-wide;
+		display: inline-block;
+	}
+	.widget {
+		font-size: $small-font-size;
+		border-bottom: $border-width solid theme-color("light");
+		padding-top: $spacer;
+		padding-bottom: $spacer;
+		a {
+			color: $text-muted;
+			&:hover {
+				color: $gray-800;
+			}
+		}
+		ul {
+			@extend .nav;
+			flex-direction: column;
+		}
+		ul ul,
+		ul .children {
+			list-style: none;
+			padding-left: $spacer;
+		}
+		li {
+			@extend .nav-item;
+		}
+		li > a {
+			@extend .nav-link;
+		}
+	}
+	.wc-layered-nav-term {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-right: calc(#{$spacer} - #{$badge-padding-y});
+	}
+	.woocommerce-widget-layered-nav-list__item--chosen,
+	.chosen,
+	.current-cat > a {
+		background-color: theme-color("light");
+	}
+}

@@ -1,0 +1,25 @@
+//
+// Nav Scroller
+// --------------------------------------------------
+
+.nav-scroller {
+    position: relative;
+    overflow-x: hidden;
+    z-index: 2;
+}
+.nav-scroller__items {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: $spacer;
+    margin-top: -1px;
+    margin-bottom: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    li {
+		white-space: initial;
+	}
+}

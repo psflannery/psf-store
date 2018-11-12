@@ -1,0 +1,35 @@
+//
+// Utilities
+// --------------------------------------------------
+
+.screen-reader-text {
+	@extend .sr-only;
+}
+
+.stop-scrolling {
+	overflow: hidden;
+}
+
+.text-decoration-none {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.required {
+	color: $red;
+}
+
+// Positioning
+.fixed-fs {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+// Text alignment
+.align-text-super {
+	vertical-align: super;
+}

@@ -1,0 +1,228 @@
+//
+// Flickity
+// --------------------------------------------------
+
+.flickity-enabled {
+	position: relative;
+	&:focus {
+		outline: none;
+	}
+}
+.flickity-viewport {
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+}
+.flickity-slider {
+	position: absolute;
+	@include size(100%);
+}
+
+// draggable
+.flickity-enabled.is-draggable {
+	tap-highlight-color: transparent;
+	user-select: none;
+}
+.flickity-enabled.is-draggable .flickity-viewport {
+	cursor: move;
+	cursor: grab;
+	&.is-pointer-down {
+		cursor: grabbing;
+	}
+}
+
+// flickity-button
+.flickity-button {
+	position: absolute;
+	background: $flkty-btn-bg-color ;
+	border: none;
+	color: $flkty-btn-color;
+	transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover {
+		background: $flkty-btn-bg-color-hover;
+		cursor: pointer;
+	}
+	&:focus {
+		outline: none;
+		box-shadow: $flkty-btn-focus-color;
+	}
+	&:active {
+		opacity: $flkty-btn-active-opacity;
+	}
+	&:disabled {
+		opacity: $flkty-btn-disabled-opacity;
+		cursor: auto;
+		pointer-events: none;
+	}
+}
+.flickity-button-icon {
+	fill: $flkty-btn-icon-color;
+}
+
+// previous/next buttons
+.flickity-prev-next-button {
+	top: 50%;
+	@include size($flkty-btn-size);
+	border-radius: 50%;
+	transform: translateY(-50%);
+	.carousel-wrap & {
+		@include size($flkty-btn-size-sm);
+		@include media-breakpoint-up(md) {
+			@include size($flkty-btn-size-md);
+		}
+		@include media-breakpoint-up(xl) {
+			@include size($flkty-btn-size);	
+		}
+	}
+}
+.flickity-prev-next-button.previous { 
+	left: $flkty-btn-offset;
+	.carousel-wrap & {
+		left: -$flkty-btn-offset/2;
+		@include media-breakpoint-up(sm) {
+			left: $flkty-btn-wrap-offset-sm;
+		}
+		@include media-breakpoint-up(md) {
+			left: -$flkty-btn-wrap-offset-md;
+		}
+		@include media-breakpoint-up(lg) {
+			left: -$flkty-btn-wrap-offset-lg;
+		}
+		@include media-breakpoint-up(xl) {
+			left: -$flkty-btn-wrap-offset;
+		}
+	}
+}
+.flickity-prev-next-button.next { 
+	right: $flkty-btn-offset;
+	.carousel-wrap & {
+		right: -$flkty-btn-offset/2;
+		@include media-breakpoint-up(sm) {
+			right: $flkty-btn-wrap-offset-sm;
+		}
+		@include media-breakpoint-up(md) {
+			right: -$flkty-btn-wrap-offset-md;
+		}
+		@include media-breakpoint-up(lg) {
+			right: -$flkty-btn-wrap-offset-lg;
+		}
+		@include media-breakpoint-up(xl) {
+			right: -$flkty-btn-wrap-offset;
+		}
+	}
+}
+.flickity-prev-next-button .flickity-button-icon {
+	position: absolute;
+	left: $flkty-btn-icon-offset;
+	top: $flkty-btn-icon-offset;
+	@include size($flkty-btn-icon-size);
+}
+
+// page dots
+.flickity-page-dots {
+	display: flex;
+    justify-content: flex-end;
+	position: absolute;
+	width: 100%;
+	bottom: $flkty-dots-offset-bottom;
+	padding-right: $flkty-dots-offset-right;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+}
+.flickity-page-dots .dot {
+	display: inline-block;
+	@include size($flkty-dots-size);
+	margin: 0 $flkty-dots-spacer;
+	background: $flkty-dots-color;
+	border-radius: 50%;
+	opacity: $flkty-dots-opacity;
+	cursor: pointer;
+	&:only-child {
+		display: none;
+	}
+	&.is-selected {
+		opacity: $flkty-dots-opacity-selected ;
+	}
+}
+
+// Cells
+.carousel-cell, 
+.woocommerce-product-gallery__image {
+	width: 100%;
+	h2 {
+		position: absolute;
+		bottom: $spacer / 2;
+		left: $spacer;
+	}
+	.is-fullscreen & {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.carousel-nav-cell {
+	margin-right: $grid-gutter-width / 2;
+	@include size(100px);
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+// Fullscreen v1.0.1
+.flickity-enabled.is-fullscreen {
+	position: fixed;
+	left: 0;
+	top: 0;
+	@include size(100%);
+	background: $white;
+	padding-top: $spacer * 2;
+	padding-bottom: $spacer * 2;
+	z-index: 99999;
+	.flickity-fullscreen-button-exit { 
+		display: block;
+	}
+	.flickity-fullscreen-button-view {
+		display: none; 
+	}
+}
+
+// prevent page scrolling when flickity is fullscreen
+html.is-flickity-fullscreen {
+	overflow: hidden;
+}
+
+// flickity-fullscreen-button
+.flickity-fullscreen-button {
+  display: block;
+  right: $spacer;
+  top: $spacer;
+  @include size($flkty-btn-size-sm);
+  padding: $spacer;
+  border-radius: 50%;
+	.flickity-button-icon {
+		position: absolute;
+		@include size($icon-size-sm);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.flickity-fullscreen-button-exit { 
+	display: none; 
+}
+
+// As Nav For
+.carousel-nav {
+	padding-bottom: $spacer;
+}
+.carousel-nav-cell {
+	cursor: pointer;
+}
+
+// Wrapped Carousels
+.carousel-wrap {
+	margin-left: -$grid-gutter-width/2;
+	margin-right: -$grid-gutter-width/2;
+}

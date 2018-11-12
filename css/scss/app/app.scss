@@ -1,0 +1,68 @@
+/*!
+Theme Name: Store test
+Theme URI: http://underscores.me/
+Author: Paul Flannery
+Author URI: http://paulflannery.co.uk
+Description: Coming soon
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: psf-store
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Store test is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+// *** Vendor ***
+@import "_custom";
+@import "../bootstrap/bootstrap";
+
+// *** Settings ***
+@import "_mixins";
+
+// *** Base ***
+@import "base/root";
+@import "base/variables";
+@import "base/blocks";
+@import "base/icons";
+@import "base/keyframes";
+
+// *** Utils ***
+@import "utils/utilities";
+@import "utils/sticky-footer";
+@import "utils/override-select-2";
+@import "utils/infinite-scroll";
+@import "utils/flickity";
+
+// *** Components ***
+@import "components/site-page";
+@import "components/site-header";
+@import "components/site-header-cart";
+@import "components/site-navigation";
+@import "components/site-pagination";
+@import "components/site-footer";
+
+@import "components/shop-tables";
+@import "components/shop-product-card";
+@import "components/shop-product-gallery";
+@import "components/shop-product-utilities";
+//@import "components/shop-sidebar";
+@import "components/shop-basket";
+@import "components/shop-checkout";
+
+@import "components/breadcrumbs";
+@import "components/product-search";
+@import "components/offcanvas-menu";
+@import "components/nav-scroller";
+@import "components/contact-form";
+@import "components/widgets";
+@import "components/woocommerce-widgets";
+@import "components/account";
