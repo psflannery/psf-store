@@ -156,26 +156,6 @@ add_filter( 'wp_nav_menu_items', 'psf_add_menu_list_items', 10, 2 );
 */
 
 /**
- * Filter thumbnail atts
- * 
- * @param  array $attr Attributes for the image markup. 
- * @return array       Filtered attributes for the image markup.
- *
- * @since store_test 1.0.0
- *
- * this seems to dupliacte imgage in the cart.
- *
-function psf_store_filter_thumbnails_atts( $attr ) {
-	if( is_cart() ) {
-		$attr['class'] .= ' skip-lazy';
-	}
-
-	return $attr;
-}
-add_filter( 'wp_get_attachment_image_attributes', 'psf_store_filter_thumbnails_atts' );
-*/
-
-/**
  * Return the header promotions text saved in the Customizer.
  * 
  * @return string
