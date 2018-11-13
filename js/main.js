@@ -454,8 +454,6 @@
 		var DOM = {};
 
 		var ClassName = {
-			//ADDED:           'added',
-			//LOADING:         'loading',
 			UPDATING:        'updating',
 			CHECKOUT_ACTIVE: 'checkout--active',
 			D_NONE:          'd-none',
@@ -481,6 +479,10 @@
 
 			var $btn = $(e.currentTarget),
 				result = $btn.parents('form').serialize() + '&' + encodeURI($btn.attr('name')) + '=' + encodeURI($btn.attr('value'));
+
+			if( $btn.is('.wc-variation-selection-needed') ) {
+				return;
+			}
 
 			$btn.attr('disabled', true).button('toggle').addClass(ClassName.UPDATING);
 
