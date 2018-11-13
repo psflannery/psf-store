@@ -31,7 +31,7 @@
 	color: $body-color;
 	display: block;
 	margin-top: -($card-spacer-y / 2);
-	//font-size: $small-font-size;
+	font-weight: $font-weight-semi-bold;
 }
 .price del,
 .cart del {

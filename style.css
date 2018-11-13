@@ -7617,7 +7617,8 @@ table.shop_table_responsive tr td {
 .price {
   color: #212529;
   display: block;
-  margin-top: -0.375rem; }
+  margin-top: -0.375rem;
+  font-weight: 500; }
 
 .price del,
 .cart del {
