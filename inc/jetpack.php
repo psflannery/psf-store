@@ -18,10 +18,9 @@
 function psf_store_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'render'    => 'psf_store_infinite_scroll_render',
-		'footer'    => false,
-		//'footer'    => 'page',
+		'container'      => 'main',
+		'render'         => 'psf_store_infinite_scroll_render',
+		'footer'         => false,
 		'posts_per_page' => 12,
 	) );
 
@@ -29,7 +28,6 @@ function psf_store_jetpack_setup() {
 	add_theme_support( 'jetpack-responsive-videos' );
 }
 add_action( 'after_setup_theme', 'psf_store_jetpack_setup' );
-//add_action( 'init', 'psf_store_jetpack_setup' );
 
 // Infinite Scroll
 /**
@@ -38,7 +36,6 @@ add_action( 'after_setup_theme', 'psf_store_jetpack_setup' );
  * @since store_test 1.0.0
  */
 function psf_store_infinite_scroll_render() {
-	echo 'BACON';
 	do_action( 'psf_store_jetpack_infinite_scroll_before' );
 	
 	if ( psf_store_is_product_archive() ) {
@@ -46,17 +43,16 @@ function psf_store_infinite_scroll_render() {
 		woocommerce_product_loop_start();
 	}
 
-	while ( have_posts() ) {
+	while ( have_posts() ) :
 		the_post();
-		if ( psf_store_is_product_archive() ) :
-			echo "bacon";
+		if ( psf_store_is_product_archive() ) {
 			wc_get_template_part( 'content', 'product' );
-		elseif ( is_search() ) :
+		} elseif ( is_search() ) {
 			get_template_part( 'template-parts/content', 'search' );
-		else :
+		} else {
 			get_template_part( 'template-parts/content', get_post_type() );
-		endif;
-	}
+		}
+	endwhile;
 
 	if ( psf_store_is_product_archive() ) {
 		woocommerce_product_loop_end();
@@ -65,23 +61,6 @@ function psf_store_infinite_scroll_render() {
 
 	do_action( 'psf_store_jetpack_infinite_scroll_after' );
 }
-
-/**
- * Adds columns wrapper to content appended by Jetpack infinite scroll
- * 
- * @return void
- *
- * @since store_test 1.0.0
- */
-function jetpack_infinite_scroll_wrapper_columns() {
-	add_action( 'psf_store_jetpack_product_infinite_scroll_before', 'psf_store_woocommerce_product_columns_wrapper_open' );
-	add_action( 'psf_store_jetpack_product_infinite_scroll_after', 'psf_store_woocommerce_product_columns_wrapper_close' );
-}
-
-/*
-if ( psf_store_is_woocommerce_activated() ) {
-	add_action( 'init', 'jetpack_infinite_scroll_wrapper_columns' );
-}*/
 
 // Lazy Load
 /**
@@ -195,7 +174,7 @@ add_filter( 'jetpack_sharing_display_markup', 'psf_store_share_daddy_markup', 10
  */
 
 // Make sure Jetpack doesn't concatenate all its CSS
-add_filter( 'jetpack_implode_frontend_css', '__return_false' );
+//add_filter( 'jetpack_implode_frontend_css', '__return_false' );
 
 // Remove each CSS file, one at a time
 function psf_store_remove_jetpack_styles() {

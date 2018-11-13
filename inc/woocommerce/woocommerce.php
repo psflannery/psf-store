@@ -130,15 +130,6 @@ function psf_store_woocommerce_related_products_args( $args ) {
 add_filter( 'woocommerce_output_related_products_args', 'psf_store_woocommerce_related_products_args' );
 
 /**
- * Add Product columns wrapper to infinite scroll items.
- * 
- * @since store_test 1.0.0
- */
-if ( psf_store_is_woocommerce_activated() ) {
-	add_action( 'init', 'jetpack_infinite_scroll_wrapper_columns' );
-}
-
-/**
  * Checks if the current page is a product archive
  * 
  * @return boolean

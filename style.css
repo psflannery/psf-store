@@ -6840,7 +6840,9 @@ div.sharedaddy h3.sd-title {
 
 .infinite-loader {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem; }
 
 #infinite-handle {
   display: flex;

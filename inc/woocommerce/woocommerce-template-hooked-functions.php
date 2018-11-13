@@ -449,33 +449,6 @@ if ( ! function_exists( 'psf_store_sorting_wrapper_close' ) ) {
 	}
 }
 
-if ( ! function_exists( 'psf_store_woocommerce_product_columns_wrapper_open' ) ) {
-	/**
-	 * Product columns wrapper.
-	 *
-	 * @return  void
-	 *
-	 * @since store_test 1.0.0
-	 */
-	function psf_store_woocommerce_product_columns_wrapper_open() {
-		$columns = psf_store_woocommerce_loop_columns();
-		echo '<div class="xxx columns-' . absint( $columns ) . '">';
-	}
-}
-
-if ( ! function_exists( 'psf_store_woocommerce_product_columns_wrapper_close' ) ) {
-	/**
-	 * Product columns wrapper close.
-	 *
-	 * @return  void
-	 *
-	 * @since store_test 1.0.0
-	 */
-	function psf_store_woocommerce_product_columns_wrapper_close() {
-		echo '</div>';
-	}
-}
-
 if ( ! function_exists( 'psf_store_product_filter_wrap_open' ) ) {
 	/**
 	 * Product filter wrapper open.

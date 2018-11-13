@@ -22,6 +22,8 @@
 .infinite-loader {
 	display: flex;
 	justify-content: center;
+	margin-top: $spacer;
+	margin-bottom: $spacer * 2;
 }
 
 // Override default button styles.
