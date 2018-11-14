@@ -6912,9 +6912,9 @@ div.sharedaddy h3.sd-title {
   top: 50%;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+          transform: translateY(-50%);
+  opacity: 0; }
   .carousel-wrap .flickity-prev-next-button {
     width: 1.5rem;
     height: 1.5rem; }
@@ -6926,11 +6926,13 @@ div.sharedaddy h3.sd-title {
       .carousel-wrap .flickity-prev-next-button {
         width: 2.5rem;
         height: 2.5rem; } }
+  .woocommerce-product-gallery:hover .flickity-prev-next-button {
+    opacity: 1; }
 
 .flickity-prev-next-button.previous {
-  left: 1rem; }
+  left: 0; }
   .carousel-wrap .flickity-prev-next-button.previous {
-    left: -0.5rem; }
+    left: 0; }
     @media (min-width: 576px) {
       .carousel-wrap .flickity-prev-next-button.previous {
         left: 1.5rem; } }
@@ -6945,9 +6947,9 @@ div.sharedaddy h3.sd-title {
         left: -2.5rem; } }
 
 .flickity-prev-next-button.next {
-  right: 1rem; }
+  right: 0; }
   .carousel-wrap .flickity-prev-next-button.next {
-    right: -0.5rem; }
+    right: 0; }
     @media (min-width: 576px) {
       .carousel-wrap .flickity-prev-next-button.next {
         right: 1.5rem; } }

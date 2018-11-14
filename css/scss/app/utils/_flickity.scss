@@ -63,8 +63,8 @@
 .flickity-prev-next-button {
 	top: 50%;
 	@include size($flkty-btn-size);
-	border-radius: 50%;
 	transform: translateY(-50%);
+	opacity: 0;
 	.carousel-wrap & {
 		@include size($flkty-btn-size-sm);
 		@include media-breakpoint-up(md) {
@@ -73,6 +73,9 @@
 		@include media-breakpoint-up(xl) {
 			@include size($flkty-btn-size);	
 		}
+	}
+	.woocommerce-product-gallery:hover & {
+		opacity: 1;
 	}
 }
 .flickity-prev-next-button.previous { 
