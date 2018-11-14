@@ -74,8 +74,10 @@
 			@include size($flkty-btn-size);	
 		}
 	}
-	.woocommerce-product-gallery:hover & {
-		opacity: 1;
+	&:enabled {
+		.woocommerce-product-gallery:hover & {
+			opacity: 1;
+		}
 	}
 }
 .flickity-prev-next-button.previous { 

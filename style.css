@@ -6926,7 +6926,7 @@ div.sharedaddy h3.sd-title {
       .carousel-wrap .flickity-prev-next-button {
         width: 2.5rem;
         height: 2.5rem; } }
-  .woocommerce-product-gallery:hover .flickity-prev-next-button {
+  .woocommerce-product-gallery:hover .flickity-prev-next-button:enabled {
     opacity: 1; }
 
 .flickity-prev-next-button.previous {
