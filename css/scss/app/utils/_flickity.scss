@@ -164,7 +164,7 @@
 }
 .carousel-nav-cell {
 	margin-right: $grid-gutter-width / 2;
-	@include size(100px);
+	@include size($flkty-nav-cell-size);
 	&:last-of-type {
 		margin-right: 0;
 	}
