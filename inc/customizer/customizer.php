@@ -92,6 +92,7 @@ function psf_store_live_preview_support( $wp_customize ) {
 }
 add_action( 'customize_register', 'psf_store_live_preview_support', 999 );
 
+
 /**
  * Sanitize customizer text inputs.
  *

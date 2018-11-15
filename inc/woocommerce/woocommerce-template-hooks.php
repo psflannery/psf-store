@@ -25,6 +25,15 @@ add_action( 'homepage', 'psf_store_featured_products', 40 );
 add_action( 'homepage', 'psf_store_featured_products_slideshow', 50 );
 add_action( 'homepage', 'psf_store_on_sale_products', 60 );
 
+
+/**
+ * Products
+ *
+ * @see psf_store_sticky_single_add_to_cart()
+ */
+add_action( 'psf_store_after_footer', 'psf_store_sticky_single_add_to_cart', 999 );
+
+
 // Post Content
 //---------------------------------------------------------------
 add_action( 'psf_store_homepage', 'psf_store_homepage_header', 10 );

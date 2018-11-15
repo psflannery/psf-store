@@ -1,0 +1,16 @@
+//
+// Sticky add to Cart
+// --------------------------------------------------
+
+.sticky-add-to-cart {
+	background-color: $body-bg;
+	transform: translateY(-105%);
+	transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	&.in {
+		transform: translateY(0);
+	}
+}
+.sticky-add-to-cart__content img {
+	width: auto;
+    height: 50px;
+}

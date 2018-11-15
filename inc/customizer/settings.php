@@ -218,3 +218,31 @@ function psf_store_customize_footer_text( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'psf_store_customize_footer_text' );
+
+
+/**
+ * Register the Sticky add to cart settings
+ *
+ * @since store_test 1.0.2
+ */
+function psf_store_customize_sticky_add_to_cart( $wp_customize ) {
+	$wp_customize->add_setting(
+		'psf_store_sticky_add_to_cart', 
+		array(
+			'default'               => true,
+			'sanitize_callback'     => 'wp_validate_boolean',
+		)
+	);
+
+	$wp_customize->add_control(
+		'psf_store_sticky_add_to_cart', 
+		array(
+			'type'                  => 'checkbox',
+			'section'               => 'psf_store_single_product_page',
+			'label'                 => __( 'Sticky Add-To-Cart', 'psf-store' ),
+			'description'           => __( 'A small content bar at the top of the browser window which includes relevant product information and an add-to-cart button. It slides into view once the standard add-to-cart button has scrolled out of view.', 'psf-store' ),
+			'priority'              => 10,
+		)
+	);
+}
+add_action( 'customize_register', 'psf_store_customize_sticky_add_to_cart' );

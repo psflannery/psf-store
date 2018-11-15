@@ -1,4 +1,4 @@
-/* globals wc_add_to_cart_params, wc_cart_fragments_params, jQuery */
+/* globals wc_cart_fragments_params, jQuery */
 
 ( function ( $ ) {
 	// Definitiions
@@ -161,7 +161,7 @@
 			});
 
 			// on window resize
-			DOM.$window .on('resize', throttle(function() {
+			DOM.$window.on('resize', throttle(function() {
 				doResize(DOM.$trigger.attr('data-target'));
 			}, 200));
 		}
@@ -707,6 +707,81 @@
 		};
 	}());
 
+	// Sticky Add To Cart
+	var stickyAddToCart = (function() {
+		'use strict';
+
+		var DOM = {};
+
+		var ClassName = {
+			IN: 'in',
+		};
+
+		/* =================== private methods ================= */
+		function cacheDom() {
+			DOM.$window = $(window);
+			DOM.$stickyAddToCart = $('.sticky-add-to-cart');
+			DOM.$trigger = $('.entry-summary');
+			DOM.$selectOptions = $('.sticky-add-to-cart .btn');
+		}
+
+		function bindEvents() {
+			DOM.$window.on('scroll', throttle(function() {
+				stickyAddToCartToggle();
+			}, 200));
+		}
+
+		function stickyAddToCartToggle() {		
+			if ( ( DOM.$trigger[0].getBoundingClientRect().top + DOM.$trigger[0].scrollHeight ) < 0 ) {
+				DOM.$stickyAddToCart.addClass( ClassName.IN );
+			} else if ( DOM.$stickyAddToCart.hasClass( ClassName.IN ) ) {
+				DOM.$stickyAddToCart.removeClass( ClassName.IN );
+			}
+		}
+
+		function getProductId() {
+			var product_id = null;
+
+			document.body.classList.forEach( function( item ){
+				if ( 'postid-' === item.substring( 0, 7 ) ) {
+					product_id = item.replace( /[^0-9]/g, '' );
+				}
+			} );
+
+			if ( product_id ) {
+				var $product = $( '#product-' + product_id );
+
+				if ( $product ) {
+					if ( ! $product.hasClass( 'product-type-simple' ) && ! $product.hasClass( 'product-type-external' ) ) {
+						DOM.$selectOptions.on('click', function(e) {
+							e.preventDefault();
+
+							document.getElementById( 'product-' + product_id ).scrollIntoView();
+						} );
+					}
+				}
+			}
+		}
+
+		/* =================== public methods ================== */
+		function init() {
+			cacheDom();
+			
+			if ( ! DOM.$stickyAddToCart.length ) {
+				return;
+			}
+
+			stickyAddToCartToggle();
+			bindEvents();
+			getProductId();
+		}
+
+		/* =============== export public methods =============== */
+		return {
+			init: init,
+		};
+	}());
+
 	// You Ready for this?
 	$(document).ready(function() {
 		offcanvas.init();
@@ -718,6 +793,7 @@
 		productSearch.init();
 		productFilters.init();
 		miniCartWidget.init();
+		stickyAddToCart.init();
 
 		// Init tooltips
 		$(function () {

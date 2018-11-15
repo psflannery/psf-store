@@ -7844,6 +7844,21 @@ p.stars.selected a:not(.active):before {
   .woocommerce-privacy-policy-text p {
     margin-bottom: 0; }
 
+.sticky-add-to-cart {
+  background-color: #fff;
+  -webkit-transform: translateY(-105%);
+          transform: translateY(-105%);
+  transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+  .sticky-add-to-cart.in {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+
+.sticky-add-to-cart__content img {
+  width: auto;
+  height: 50px; }
+
 .header-promo + nav .breadcrumb {
   border-top-width: 0 !important; }
 

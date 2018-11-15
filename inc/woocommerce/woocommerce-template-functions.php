@@ -513,3 +513,40 @@ function psf_store_filter_sidebar_count_html( $count, $term ) {
 	return '<span class="count badge">' . $term . '</span>';
 }
 add_filter( 'woocommerce_layered_nav_count', 'psf_store_filter_sidebar_count_html', 10, 2 );
+
+
+// Sticky add to Cart
+//---------------------------------------------------------------
+
+if ( ! function_exists( 'psf_store_sticky_single_add_to_cart' ) ) {
+	/**
+	 * Sticky Add to Cart
+	 *
+	 * @since store_test 1.0.0
+	 */
+	function psf_store_sticky_single_add_to_cart() {
+		global $product;
+
+		if ( class_exists( 'Storefront_Sticky_Add_to_Cart' ) || true !== get_theme_mod( 'psf_store_sticky_add_to_cart' ) ) {
+			return;
+		}
+
+		if ( ! is_product() ) {
+			return;
+		}
+		?>
+			<section class="sticky-add-to-cart fixed-top shadow-sm w-100 d-flex justify-content-center">
+				<div class="sticky-add-to-cart__content py-2">
+					<?php echo wp_kses_post( woocommerce_get_product_thumbnail() ); ?>
+					<div class="sticky-add-to-cart__content-product-info d-inline-block ml-3">
+						<span class="sticky-add-to-cart__content-title"><strong><?php the_title(); ?></strong></span>
+						<span class="sticky-add-to-cart__content-price"><?php echo wp_kses_post( $product->get_price_html() ); ?></span>
+					</div>
+					<a href="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="btn btn-primary ml-3" role="button">
+						<?php echo esc_attr( $product->add_to_cart_text() ); ?>
+					</a>
+				</div>
+			</section>
+		<?php
+	}
+}

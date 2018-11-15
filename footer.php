@@ -51,6 +51,9 @@
 			</div>
 		</div>
 	</footer>
+
+	<?php do_action( 'psf_store_after_footer' ); ?>
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

@@ -11,6 +11,8 @@
  * @param object $wp_customize Instance of WP_Customize_Class.
  *
  * @since store_test 1.0.0
+ * @since store_test 1.0.2
+ *        psf_store_single_product_page
  */
 function psf_store_customize_sections( $wp_customize ) {
 
@@ -53,6 +55,16 @@ function psf_store_customize_sections( $wp_customize ) {
 			'description' => esc_html__( 'Configure the category archive layout.', 'psf-store' ),
 			'priority'    => 90,
 			'panel'       => 'store-options',
+		)
+	);
+
+	// Register the Product Page section.
+	$wp_customize->add_section(
+		'psf_store_single_product_page',
+		array(
+			'title'    => esc_html__( 'Product Page', 'psf-store' ),
+			'priority' => 60,
+			'panel'    => 'store-options',
 		)
 	);
 
