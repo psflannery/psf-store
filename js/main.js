@@ -756,7 +756,7 @@
 						DOM.$selectOptions.on('click', function(e) {
 							e.preventDefault();
 
-							document.getElementById( 'product-' + product_id ).scrollIntoView();
+							$product[0].scrollIntoView();
 						} );
 					}
 				}
