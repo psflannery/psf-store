@@ -2,32 +2,7 @@
 // Shop Image Gallery
 // --------------------------------------------------
 
-.flex-viewport {
-	margin-bottom: $spacer;
-}
-.flex-control-nav {
-	list-style: none;
-	padding-left: 0;
+.woocommerce-product-gallery__image {
 	display: flex;
-	@include media-breakpoint-up(md) {
-		flex-direction: column;
-		margin-bottom: 0;
-		margin-right: $grid-gutter-width/2;
-	}
-	li {
-		@include media-breakpoint-down(sm) {
-			padding-right: $spacer;
-			&:last-of-type {
-				padding-right: 0;
-			}
-		}
-		@include media-breakpoint-up(md) {
-			padding-bottom: $spacer;
-			//@include size(3rem);
-			width: 3rem;
-			&:last-of-type {
-				padding-bottom: 0;
-			}
-		}
-	}
+	justify-content: center;
 }

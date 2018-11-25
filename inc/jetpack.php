@@ -21,7 +21,6 @@ function psf_store_jetpack_setup() {
 		'container'      => 'main',
 		'render'         => 'psf_store_infinite_scroll_render',
 		'footer'         => false,
-		'posts_per_page' => 12,
 	) );
 
 	// Add theme support for Responsive Videos.
@@ -29,7 +28,9 @@ function psf_store_jetpack_setup() {
 }
 add_action( 'after_setup_theme', 'psf_store_jetpack_setup' );
 
+
 // Infinite Scroll
+// ------------------------------------------------------------
 /**
  * Custom render function for Infinite Scroll.
  *
@@ -62,12 +63,14 @@ function psf_store_infinite_scroll_render() {
 	do_action( 'psf_store_jetpack_infinite_scroll_after' );
 }
 
+
 // Lazy Load
+// ------------------------------------------------------------
 /**
  * Exclude Image From Jetpack Lazyload
  * 
  * @param  array $blacklisted_classes  Array of strings where each string is a class
- * @return array                      [description]
+ * @return array                       Classes to exclude from Jetpack Lazyload
  *
  * @since store_test 1.0.0
  */
@@ -80,6 +83,7 @@ add_filter( 'jetpack_lazy_images_blacklisted_classes', 'psf_store_skip_lazy_load
 
 
 // Contact form.
+// ------------------------------------------------------------
 /**
  * Add classes to Jetpack contact form
  * 
@@ -148,6 +152,7 @@ add_filter( 'grunion_contact_form_success_message', 'psf_store_jetpack_contact_s
 
 
 // Sharing
+// ------------------------------------------------------------
 /**
  * Filters the content markup of the Jetpack sharing links
  *
@@ -167,6 +172,7 @@ add_filter( 'jetpack_sharing_display_markup', 'psf_store_share_daddy_markup', 10
 
 
 // Utils
+// ------------------------------------------------------------
 /**
  * Remove Jetpack CSS
  *
@@ -174,7 +180,7 @@ add_filter( 'jetpack_sharing_display_markup', 'psf_store_share_daddy_markup', 10
  */
 
 // Make sure Jetpack doesn't concatenate all its CSS
-//add_filter( 'jetpack_implode_frontend_css', '__return_false' );
+add_filter( 'jetpack_implode_frontend_css', '__return_false' );
 
 // Remove each CSS file, one at a time
 function psf_store_remove_jetpack_styles() {

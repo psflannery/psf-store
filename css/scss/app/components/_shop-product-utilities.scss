@@ -64,13 +64,6 @@ ins > .amount {
 	}
 }
 
-// Messages
-.woocommerce-message {
-	width: 100%;
-	//margin-bottom: 0;
-	//@extend .alert;
-}
-
 // Custom form size
 .form-expand-sm {
 	@include media-breakpoint-down(sm) {
@@ -108,6 +101,7 @@ ins > .amount {
 	}
 }
 
+// Quantity Input
 .plus-minus-input {
 	align-items: center;
 	.qty {
@@ -246,6 +240,9 @@ p.stars {
     left: 0;
     width: 100%;
     z-index: $zindex-fixed;
+}
+.woocommerce-message {
+	width: 100%;
 }
 
 // Accordion

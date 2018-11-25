@@ -377,6 +377,7 @@
 			cellAlign: 'left',
 			contain: true,
 			fullscreen: isProductPage,
+			//lazyLoad: 2
 		};
 
 		var flktyWrapOptions = {
@@ -680,7 +681,7 @@
 		function openCartWidget(e) {
 			e.preventDefault();
 
-			if (DOM.$body.is('.woocommerce-cart, .woocommerce-checkout')) {
+			if ( DOM.$body.is('.woocommerce-cart, .woocommerce-checkout') ) {
 				return;
 			}
 
@@ -752,6 +753,15 @@
 				var $product = $( '#product-' + product_id );
 
 				if ( $product ) {
+					if ( $product.hasClass( 'product-type-simple' ) ) {
+						DOM.$selectOptions.on('click', function(e) {
+							e.preventDefault();
+
+							$('#site-header-cart')[0].scrollIntoView();
+							$('.single_add_to_cart_button').trigger('click');
+						});
+					}
+
 					if ( ! $product.hasClass( 'product-type-simple' ) && ! $product.hasClass( 'product-type-external' ) ) {
 						DOM.$selectOptions.on('click', function(e) {
 							e.preventDefault();

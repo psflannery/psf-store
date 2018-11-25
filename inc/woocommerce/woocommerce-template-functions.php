@@ -289,7 +289,7 @@ function woocommerce_taxonomy_archive_description() {
  */
 function psf_store_filter_product_list_classes( $classes ) {
 	if( is_product() ) {
-		$classes .= 'carousel-wrap px-sm-5 px-md-3 px-lg-0';
+		$classes .= 'carousel-wrap px-sm-5x px-md-3 px-lg-0';
 	} else {
 		$classes .= 'row';
 	}

@@ -22,7 +22,7 @@
  */
 function psf_store_post_classes( $classes, $class, $post_id ) {
     if ( psf_store_is_product_archive() ) {
-    	$classes[] = 'col-sm-6 col-md-4 col-lg-3 mb-5';
+    	$classes[] = 'col-6 col-md-4 col-lg-3 mb-5';
     }
 
     if ( is_front_page() && 'product' === get_post_type() ) {
@@ -184,6 +184,26 @@ add_action( 'before_content', 'psf_store_get_header_promotions_text', 10 );
 
 
 /**
+ * Filter attributes for attahcment images.
+ * 
+ * @param  array $attr Attributes for the image markup.
+ * @return array       Filterd atrributes for attachment image markup.
+ *
+ * @since store_test 1.0.2
+ */
+function psf_store_filter_attachment_image_attributes( $attr ) {
+	if ( is_product() ) {
+		remove_filter( 'wp_get_attachment_image_attributes' , 'psf_store_filter_attachment_image_attributes' );
+
+		$attr['class'] .= ' skip-lazy';
+	}
+
+	return $attr;
+}
+add_filter('wp_get_attachment_image_attributes','psf_store_filter_attachment_image_attributes');
+
+
+/**
  * Filter markup of defualt review fields.
  * 
  * @param  array $comment_form The default review fields.
@@ -277,7 +297,7 @@ add_filter( 'comment_form_defaults', 'psf_store_comment_form_defaults', 10, 1 );
  * @since store_test 1.0.0
  */
 function psf_store_filter_before_widget_product_list() {
-	$before_list = '<ul class="product_list_widget list-unstyled carousel-wrap px-sm-5 px-md-3 px-lg-0">';
+	$before_list = '<ul class="product_list_widget list-unstyled carousel-wrap px-sm-5x px-md-3 px-lg-0">';
 
 	return $before_list;
 }

@@ -3,20 +3,46 @@
 // --------------------------------------------------
 
 .card-img-top {
-	background-color: $gray-200;
+	//background-color: $gray-200;
 	position: relative;
+	display: flex;
+	justify-content: center;
+	background-color: $body-bg;
+	padding-bottom: 100%; //
 	> img {
-		width: 100%;
+		position: absolute;
+		transition: opacity 0.25s 0.5s ease;
+		opacity: 0;
+		width: auto;
+		object-fit: cover;
+		height: calc(50vw - #{$grid-gutter-width} - #{$card-border-width * 2});
+		@include media-breakpoint-up(sm) {
+			height: (get-containers(sm)/2) - $grid-gutter-width - ($card-border-width * 2);
+		}
+		@include media-breakpoint-up(md) {
+			height: (get-containers(md)/3) - $grid-gutter-width - ($card-border-width * 2);
+		}
+		@include media-breakpoint-up(lg) {
+			height: (get-containers(lg)/4) - $grid-gutter-width - ($card-border-width * 2);
+		}
+		@include media-breakpoint-up(xl) {
+			height: (get-containers(xl)/4) - $grid-gutter-width - ($card-border-width * 2);
+		}
+		&.jetpack-lazy-image--handled {
+			opacity: 1;
+		}
 	}
 }
+
+/*
 .card-img-top .wp-post-image,
 .card-img-top img {
-	transition: opacity 0.25s 0.5s ease;
+	transition: opacity 0.5s 0.5s ease;
 	opacity: 0;
 	&.jetpack-lazy-image--handled {
 		opacity: 1;
 	}
-}
+}*/
 
 .card-body .woocommerce-loop-product__title {
 	font-size: $small-font-size;
@@ -24,4 +50,19 @@
 }
 .products--carousel .card-body {
 	display: none;
+}
+.products--carousel img {
+		height: calc(50vw - #{$grid-gutter-width} - #{$card-border-width * 2});
+		@include media-breakpoint-up(sm) {
+			height: calc(#{get-containers(sm)/2} - #{$grid-gutter-width} - #{$card-border-width * 2});
+		}
+		@include media-breakpoint-up(md) {
+			height: calc(#{get-containers(md)/3} - #{$grid-gutter-width} - #{$card-border-width * 2} - #{$spacer});
+		}
+		@include media-breakpoint-up(lg) {
+			height: (get-containers(lg)/6) - $grid-gutter-width - ($card-border-width * 2);
+		}
+		@include media-breakpoint-up(xl) {
+			height: (get-containers(xl)/6) - $grid-gutter-width - ($card-border-width * 2);
+		}
 }
