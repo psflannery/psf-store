@@ -76,10 +76,17 @@
 .woocommerce-widget-layered-nav-list__item {
 	max-width: 25%;
 	display: flex;
-	flex: 1 1 25%;
+	flex: 1 1 calc(25% - #{$spacer});
 	align-items: baseline;
 	margin-bottom: $spacer;
-	padding-right: $spacer;
+	margin-right: $spacer;
+	background-color: gray("100");
+	//border: $border-width solid gray("200");
+	padding: $spacer/2;
+	justify-content: space-between;
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
 	a {
 		color: $text-muted;
 		margin-right: $spacer/2;

@@ -8059,10 +8059,15 @@ p.stars.selected a:not(.active):before {
 .woocommerce-widget-layered-nav-list__item {
   max-width: 25%;
   display: flex;
-  flex: 1 1 25%;
+  flex: 1 1 calc(25% - 1rem);
   align-items: baseline;
   margin-bottom: 1rem;
-  padding-right: 1rem; }
+  margin-right: 1rem;
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  justify-content: space-between; }
+  .woocommerce-widget-layered-nav-list__item:nth-child(4n) {
+    margin-right: 0; }
   .woocommerce-widget-layered-nav-list__item a {
     color: #6c757d;
     margin-right: 0.5rem; }
