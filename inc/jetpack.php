@@ -94,7 +94,7 @@ add_filter( 'jetpack_lazy_images_blacklisted_classes', 'psf_store_skip_lazy_load
  */
 function psf_store_custom_contact_markup( $field_html ) {
     
-    $field_html = str_replace( '<div>', '<div class="form-group">', $field_html );
+    $field_html = str_replace( 'grunion-field-wrap', 'grunion-field-wrap form-group', $field_html );
     
     return $field_html;
 }
@@ -104,13 +104,13 @@ add_filter( 'grunion_contact_form_field_html', 'psf_store_custom_contact_markup'
  * Add classes to label > span in Jetpack contact form
  * 
  * @param  string $field_html contact form markup
- * @return string         Customised HTML markup
+ * @return string             Customised HTML markup
  *
  * @since store_test 1.0.0
  */
 function psf_store_custom_contact_label_markup( $field_html, $field_label ) {
     
-    $field_html = str_replace( '<span>', '<span class="small required align-text-super" title="required">&nbsp', $field_html );
+    $field_html = str_replace( '<span>', '<span class="small required align-text-super" title="required"> ', $field_html );
     
     return $field_html;
 }
