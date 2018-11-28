@@ -9,9 +9,22 @@
 	}
 }
 
+.custom-logo {
+	height: $custom-logo-height;
+	width: auto;
+	margin-top: $spacer/2;
+	margin-bottom: $spacer/2;
+	@include media-breakpoint-down(md) {
+		position: relative;
+		left: -$grid-gutter-width/2;
+	}
+	@include media-breakpoint-up(md) {
+		height: $custom-logo-height-md;
+	}
+}
+
 .site-header [type="search"] {
 	border: 0;
-	//border-bottom: $border-width solid theme-color("dark");
 }
 
 .site-header__nav-top-container {

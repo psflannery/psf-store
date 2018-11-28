@@ -29,7 +29,7 @@
 
 	<?php do_action('before_header'); ?>
 
-	<header id="masthead" class="site-header d-flex flex-column mt-5">
+	<header id="masthead" class="site-header d-flex flex-column mt-md-3 mt-lg-5">
 		<div class="navbar navbar-light bg-white flex-row justify-content-start">
 			<div class="container">
 				<div class="site-branding order-md-2">

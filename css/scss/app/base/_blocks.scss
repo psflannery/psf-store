@@ -13,3 +13,39 @@
   display: block;
   margin: 0 auto;
 }
+
+// Custom background colors
+.has-strong-blue-color {
+  color: $blue;
+}
+
+.has-strong-blue-background-color {
+  background-color: $blue;
+}
+
+.has-lighter-blue-color {
+  color: lighten($blue, 7.5%);
+}
+
+.has-lighter-blue-background-color {
+  background-color: lighten($blue, 7.5%);
+}
+
+.has-very-light-gray-color {
+  color: gray(100);
+}
+
+.has-very-light-gray-background-color {
+  background-color: gray(100);
+}
+
+.has-very-dark-gray-color {
+  color: gray(400);
+}
+
+.has-very-dark-gray-background-color {
+  background-color: gray(400);
+}
+
+// https://github.com/WordPress/twentynineteen/blob/master/sass/blocks/_blocks.scss
+// https://github.com/WordPress/gutenberg-starter-theme/blob/master/css/blocks.css

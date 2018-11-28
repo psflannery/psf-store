@@ -76,8 +76,8 @@ if ( ! function_exists( 'psf_store_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 190,
-			'width'       => 190,
+			'height'      => 100,
+			'width'       => 150,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -93,6 +93,9 @@ if ( ! function_exists( 'psf_store_setup' ) ) :
 
 		// Enqueue editor styles
 		//add_editor_style( 'style-editor.css' );
+		
+		// Add support for responsive embeds.
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'psf_store_setup' );

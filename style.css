@@ -6692,6 +6692,18 @@ label {
   display: block;
   margin: 0 auto; }
 
+.has-strong-blue-color {
+  color: #007bff; }
+
+.has-strong-blue-background-color {
+  background-color: #007bff; }
+
+.has-lighter-blue-color {
+  color: #268fff; }
+
+.has-lighter-blue-background-color {
+  background-color: #268fff; }
+
 .icon {
   width: 1.25rem;
   height: 1.25rem;
@@ -7072,6 +7084,19 @@ html.is-flickity-fullscreen {
   .site-branding {
     width: 100%;
     text-align: center; } }
+
+.custom-logo {
+  height: 3.5rem;
+  width: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+  @media (max-width: 991.98px) {
+    .custom-logo {
+      position: relative;
+      left: -15px; } }
+  @media (min-width: 768px) {
+    .custom-logo {
+      height: 4.5rem; } }
 
 .site-header [type="search"] {
   border: 0; }

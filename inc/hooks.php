@@ -26,7 +26,7 @@ function psf_store_post_classes( $classes, $class, $post_id ) {
     }
 
     if ( is_front_page() && 'product' === get_post_type() ) {
-    	$classes[] = 'col-sm-6 col-lg-3 mb-5';
+    	$classes[] = 'col-sm-6 col-lg-3 mb-3';
     }
 
     if ( is_page_template( 'page-templates/template-login.php' ) && ! is_user_logged_in() ) {
@@ -49,7 +49,7 @@ add_filter( 'post_class', 'psf_store_post_classes', 10, 3 );
  */
 function psf_store_product_category_classes( $classes, $class, $category ) {
 	if ( is_front_page() ) {
-		$classes[] = 'col-sm-6 col-lg-4 mb-5';
+		$classes[] = 'col-sm-6 col-lg-3 mb-3';
 	}
 
 	return $classes;

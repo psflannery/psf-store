@@ -40,8 +40,8 @@ if ( ! function_exists( 'psf_store_product_categories' ) ) {
 	function psf_store_product_categories( $args ) {
 		$args = apply_filters(
 			'psf_store_product_categories_args', array(
-				'limit'             => 3,
-				'columns'           => 3,
+				'limit'             => 4,
+				'columns'           => 4,
 				'child_categories'  => 0,
 				'orderby'           => 'name',
 				'title'             => __( 'Shop by Category', 'psf-store' ),
@@ -64,10 +64,11 @@ if ( ! function_exists( 'psf_store_product_categories' ) ) {
 		 */
 		if ( false !== strpos( $shortcode_content, 'product-category' ) ) {
 			echo '<section class="storefront-product-section storefront-product-categories" aria-label="' . esc_attr__( 'Product Categories', 'psf-store' ) . '">';
+			echo '<div class="pt-5 border-top">';
 			
 			do_action( 'psf_store_homepage_before_product_categories' );
 			
-			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+			echo '<h2 class="section-title text-center py-3 h4">' . wp_kses_post( $args['title'] ) . '</h2>';
 			
 			do_action( 'psf_store_homepage_after_product_categories_title' );
 			
@@ -75,6 +76,7 @@ if ( ! function_exists( 'psf_store_product_categories' ) ) {
 			
 			do_action( 'psf_store_homepage_after_product_categories' );
 			
+			echo '</div>';
 			echo '</section>';
 		}
 	}
@@ -119,10 +121,11 @@ if ( ! function_exists( 'psf_store_on_sale_products' ) ) {
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
 			echo '<section class="storefront-product-section storefront-on-sale-products" aria-label="' . esc_attr__( 'On Sale Products', 'psf-store' ) . '">';
+			echo '<div class="pt-5 border-top">';
 			
 			do_action( 'psf_store_homepage_before_on_sale_products' );
 			
-			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+			echo '<h2 class="section-title text-center py-3 h4">' . wp_kses_post( $args['title'] ) . '</h2>';
 			
 			do_action( 'psf_store_homepage_after_on_sale_products_title' );
 			
@@ -130,6 +133,7 @@ if ( ! function_exists( 'psf_store_on_sale_products' ) ) {
 			
 			do_action( 'psf_store_homepage_after_on_sale_products' );
 			
+			echo '</div>';
 			echo '</section>';
 		}
 	}
@@ -172,10 +176,11 @@ if ( ! function_exists( 'psf_store_recent_products' ) ) {
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
 			echo '<section class="storefront-product-section storefront-recent-products" aria-label="' . esc_attr__( 'Recent Products', 'psf-store' ) . '">';
+			echo '<div class="pt-5 border-top">';
 			
 			do_action( 'psf_store_homepage_before_recent_products' );
 			
-			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+			echo '<h2 class="section-title text-center py-3 h4">' . wp_kses_post( $args['title'] ) . '</h2>';
 			
 			do_action( 'psf_store_homepage_after_recent_products_title' );
 			
@@ -183,6 +188,7 @@ if ( ! function_exists( 'psf_store_recent_products' ) ) {
 			
 			do_action( 'psf_store_homepage_after_recent_products' );
 			
+			echo '</div>';
 			echo '</section>';
 		}
 	}
@@ -227,10 +233,11 @@ if ( ! function_exists( 'psf_store_featured_products' ) ) {
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
 			echo '<section class="storefront-product-section storefront-featured-products" aria-label="' . esc_attr__( 'Featured Products', 'psf-store' ) . '">';
+			echo '<div class="pt-5 border-top">';
 
 			do_action( 'psf_store_homepage_before_featured_products' );
 
-			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+			echo '<h2 class="section-title text-center py-3 h4">' . wp_kses_post( $args['title'] ) . '</h2>';
 			
 			do_action( 'psf_store_homepage_after_featured_products_title' );
 
@@ -238,6 +245,7 @@ if ( ! function_exists( 'psf_store_featured_products' ) ) {
 
 			do_action( 'psf_store_homepage_after_featured_products' );
 			
+			echo '</div>';
 			echo '</section>';
 		}
 	}
@@ -277,6 +285,7 @@ if ( ! function_exists( 'psf_store_featured_products_slideshow' ) ) {
 		if ( $loop->have_posts() ) :
 
 			echo '<section class="storefront-product-section storefront-featured-products-slides" aria-label="' . esc_attr__( 'Featured Products Slides', 'psf-store' ) . '">';
+			echo '<div class="pt-5 border-top">';
 
 			do_action( 'before_psf_featured_product_slideshow' );
 
@@ -292,6 +301,7 @@ if ( ! function_exists( 'psf_store_featured_products_slideshow' ) ) {
 
 			do_action( 'after_psf_featured_product_slideshow' );
 
+			echo '</div>';
 			echo '</section>';
 
 		else :
