@@ -7583,6 +7583,8 @@ table.shop_table_responsive tr td {
   justify-content: center;
   background-color: #fff;
   padding-bottom: 100%; }
+  .product-category .card-img-top > img {
+    opacity: 1; }
   .card-img-top > img {
     position: absolute;
     transition: opacity 0.25s 0.5s ease;

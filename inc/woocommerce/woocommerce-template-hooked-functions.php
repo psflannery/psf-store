@@ -40,7 +40,7 @@ if ( ! function_exists( 'psf_store_product_categories' ) ) {
 	function psf_store_product_categories( $args ) {
 		$args = apply_filters(
 			'psf_store_product_categories_args', array(
-				'limit'             => 4,
+				'limit'             => 12,
 				'columns'           => 4,
 				'child_categories'  => 0,
 				'orderby'           => 'name',
@@ -529,12 +529,7 @@ if ( ! function_exists( 'psf_store_template_loop_product_card_open' ) ) {
 	 * @since store_test 1.0.0
 	 */
 	function psf_store_template_loop_product_card_open() {
-		//print_r('WC_Shortcodes');
-		//if( psf_test() ) {
-		//if ( WC_Shortcodes::featured_products()->this ) {
 		if( is_front_page() && has_term( 'featured', 'product_visibility' ) ) {
-		//if( featured_products() ) {
-		//if( WC_Shortcodes::shortcode_wrapper( array( __CLASS__, 'featured_products' ))->this) {
 			echo '<div class="card flex-grow-1 test--yy">';
 		} else {
 			echo '<div class="card flex-grow-1 test--xx">';

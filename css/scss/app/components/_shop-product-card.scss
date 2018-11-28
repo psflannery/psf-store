@@ -3,12 +3,18 @@
 // --------------------------------------------------
 
 .card-img-top {
-	//background-color: $gray-200;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	background-color: $body-bg;
-	padding-bottom: 100%; //
+	padding-bottom: 100%;
+	
+	// This is a bit of a hack. The product category shortcode doesne't seem
+	// to be outputting the usual classes and markup meaning the lazy load script
+	// doesn't recognize it. So in the mean time, we'll force visibilty on the images...
+	.product-category & > img {
+		opacity: 1;
+	}
 	> img {
 		position: absolute;
 		transition: opacity 0.25s 0.5s ease;
