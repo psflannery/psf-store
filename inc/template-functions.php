@@ -58,7 +58,7 @@ function psf_store_footer_widgets() {
 		}
 		
 		if ( isset( $columns ) ) : 
-			$bs_classes = 'col-sm-6 col-md widget--col-xx px-5-xx'; ?>
+			$bs_classes = 'col-sm-6 col-md'; ?>
 			
 			<div class="widget--row">
 				<div class=<?php echo '"footer-widgets small row row-' . esc_attr( $row ) . ' py-5"'; ?>>

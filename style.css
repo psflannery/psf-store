@@ -4,7 +4,7 @@
  * Author: Paul Flannery
  * Author URI: http://paulflannery.co.uk
  * Description: Coming soon
- * Version: 1.0.2
+ * Version: 1.0.3
  * License: GNU General Public License v2 or later
  * License URI: LICENSE
  * Text Domain: psf-store
@@ -7517,11 +7517,25 @@ html.is-flickity-fullscreen {
   background-color: #007bff;
   border-color: #007bff; }
 
+.site-footer li {
+  padding: 0.25rem 0; }
+
+.site-footer,
 .site-footer a {
-  color: #212529; }
+  color: #6c757d; }
+
+.site-footer svg {
+  fill: #212529 !important; }
 
 .site-footer h2 {
   font-size: 1rem; }
+
+.site-footer .widget {
+  margin-bottom: 2rem; }
+
+.site-footer .sub-menu {
+  list-style: none;
+  padding-left: 1rem; }
 
 table.shop_table_responsive thead {
   display: none; }
@@ -7640,6 +7654,11 @@ table.shop_table_responsive tr td {
 .woocommerce-product-gallery__image {
   display: flex;
   justify-content: center; }
+  .woocommerce-product-gallery__image img {
+    height: 100%; }
+  .woocommerce-product-gallery__image .img-portrait {
+    max-height: 656px;
+    width: auto; }
 
 .onsale {
   position: absolute;

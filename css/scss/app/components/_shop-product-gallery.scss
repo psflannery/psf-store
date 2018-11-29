@@ -5,4 +5,11 @@
 .woocommerce-product-gallery__image {
 	display: flex;
 	justify-content: center;
+	img {
+		height: 100%;
+	}
+	.img-portrait {
+		max-height: 656px;
+		width: auto;
+	}
 }

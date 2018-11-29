@@ -2,9 +2,23 @@
 // Site footer
 // --------------------------------------------------
 
+.site-footer li {
+	padding: $spacer/4 0;
+}
+.site-footer,
 .site-footer a {
-	color: $body-color;
+	color: $text-muted;
+}
+.site-footer svg {
+	fill: $body-color !important;
 }
 .site-footer h2 {
 	font-size: $font-size-base;
+}
+.site-footer .widget {
+	margin-bottom: $spacer * 2;
+}
+.site-footer .sub-menu {
+	list-style: none;
+	padding-left: $spacer;
 }

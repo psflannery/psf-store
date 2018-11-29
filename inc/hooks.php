@@ -197,12 +197,24 @@ add_action( 'before_content', 'psf_store_get_header_promotions_text', 10 );
  */
 function psf_store_filter_attachment_image_attributes( $attr, $attachment ) {
 	if ( is_product() ) {
-		$full_size = wp_get_attachment_image_src( $attachment->ID, 'full' );
+		$image_size = wp_get_attachment_image_src( $attachment->ID, 'full' );
+		$image_w = $image_size[1];
+		$image_h = $image_size[2];
 
 		$attr['class'] .= ' skip-lazy';
+
+		if ($image_w > $image_h) { 
+			$attr['class'] .= ' img-landscape';
+		}
+		elseif ($image_w == $image_h) { 
+			$attr['class'] .= ' img-square';		
+		}
+		else { 
+			$attr['class'] .= ' img-portrait';
+		}
 		
 		if ( ! array_key_exists( 'data-flickity-lazyload', $attr ) ) {
-			$attr['data-flickity-lazyload'] = $full_size[0];
+			$attr['data-flickity-lazyload'] = $image_size[0];
 		}
 	}
 
@@ -334,14 +346,28 @@ add_filter( 'psf_store_single-product-2_widget_tags', 'psf_store_filter_single_p
  * @return string          filtered widget classes.
  *
  * @since store_test 1.0.0
- *
+ */
 function psf_store_filter_footer_widget_class( $classes ) {
 	$classes = 'col col-md-6';
 
 	return $classes;
 }
-add_filter( 'psf_store_footer_widget_4_class', 'psf_store_filter_footer_widget_class', 10 );
-*/
+//add_filter( 'psf_store_footer_widget_4_class', 'psf_store_filter_footer_widget_class', 10 );
+
+function psf_store_filter_footer_widget_tags( $widget_tags ) {
+	$widget_tags['before_title'] = '<h2 class="widget-title border-bottom font-weight-normal text-muted pb-1">';
+
+	return $widget_tags;
+}
+add_filter( 'psf_store_footer_1_widget_tags', 'psf_store_filter_footer_widget_tags', 10 );
+add_filter( 'psf_store_footer_2_widget_tags', 'psf_store_filter_footer_widget_tags', 10 );
+add_filter( 'psf_store_footer_3_widget_tags', 'psf_store_filter_footer_widget_tags', 10 );
+add_filter( 'psf_store_footer_4_widget_tags', 'psf_store_filter_footer_widget_tags', 10 );
+add_filter( 'psf_store_footer_5_widget_tags', 'psf_store_filter_footer_widget_tags', 10 );
+add_filter( 'psf_store_footer_6_widget_tags', 'psf_store_filter_footer_widget_tags', 10 );
+add_filter( 'psf_store_footer_7_widget_tags', 'psf_store_filter_footer_widget_tags', 10 );
+add_filter( 'psf_store_footer_8_widget_tags', 'psf_store_filter_footer_widget_tags', 10 );
+// ToDo - add these filters dynamically
 
 /**
  * Filter arguments for above footer and single product sidebar.
