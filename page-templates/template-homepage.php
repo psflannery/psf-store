@@ -22,9 +22,7 @@ get_header(); ?>
 			 * @hooked psf_store_product_categories    - 20
 			 * @hooked psf_store_recent_products       - 30
 			 * @hooked psf_store_featured_products     - 40
-			 * //@hooked storefront_popular_products      - 50
 			 * @hooked psf_store_on_sale_products      - 60
-			 * //@hooked storefront_best_selling_products - 70
 			 */
 			do_action( 'homepage' );
 			?>

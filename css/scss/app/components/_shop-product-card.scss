@@ -34,7 +34,9 @@
 		@include media-breakpoint-up(xl) {
 			height: (get-containers(xl)/4) - $grid-gutter-width - ($card-border-width * 2);
 		}
-		&.jetpack-lazy-image--handled {
+		&.jetpack-lazy-image--handled,
+		&.flickity-lazyloaded,
+		&.flickity-lazyerror {
 			opacity: 1;
 		}
 	}

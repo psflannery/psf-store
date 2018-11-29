@@ -377,13 +377,16 @@
 			cellAlign: 'left',
 			contain: true,
 			fullscreen: isProductPage,
-			//lazyLoad: 2
+			imagesLoaded: true,
+			lazyLoad: 2
 		};
 
 		var flktyWrapOptions = {
 			cellAlign: 'left',
 			contain: true,
 			pageDots: false,
+			imagesLoaded: true,
+			lazyLoad: 2
 		};
 
 		/* =================== private methods ================= */

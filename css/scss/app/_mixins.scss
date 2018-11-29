@@ -1,5 +1,4 @@
 // Mixins
-//
 
 @mixin alignfull() {
 	margin-left: calc(50% - 50vw + #{$spacer/2});
@@ -9,8 +8,8 @@
 }
 
 @mixin alignwide() {
-	margin-left: calc(25% - 25vw);
-	margin-right: calc(25% - 25vw);
+	//margin-left: calc(25% - 25vw);
+	//margin-right: calc(25% - 25vw);
 	width: auto;
 	max-width: 1000%;
 }

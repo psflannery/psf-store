@@ -327,11 +327,11 @@ if ( ! function_exists( 'psf_store_homepage_header' ) ) {
 	function psf_store_homepage_header() {
 		edit_post_link( __( 'Edit this section', 'psf-store' ), '', '', '', 'button storefront-hero__button-edit' );
 		?>
-		<header class="entry-header py-5">
+		<!--<header class="entry-header py-5">-->
 			
-			<?php the_title( '<h1 class="entry-title text-center mb-0 h4 text-uppercase">', '</h1>' ); ?>
+			<?php //the_title( '<h1 class="entry-title text-center mb-0 h4 text-uppercase">', '</h1>' ); ?>
 
-		</header>
+		<!--</header>-->
 		<?php
 	}
 }

@@ -6682,8 +6682,6 @@ label {
   max-width: 1000%; }
 
 .alignwide {
-  margin-left: calc(25% - 25vw);
-  margin-right: calc(25% - 25vw);
   width: auto;
   max-width: 1000%; }
 
@@ -7605,7 +7603,7 @@ table.shop_table_responsive tr td {
     @media (min-width: 1200px) {
       .card-img-top > img {
         height: 263px; } }
-    .card-img-top > img.jetpack-lazy-image--handled {
+    .card-img-top > img.jetpack-lazy-image--handled, .card-img-top > img.flickity-lazyloaded, .card-img-top > img.flickity-lazyerror {
       opacity: 1; }
 
 /*
