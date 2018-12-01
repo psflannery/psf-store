@@ -386,7 +386,7 @@
 			contain: true,
 			pageDots: false,
 			imagesLoaded: true,
-			lazyLoad: 2
+			lazyLoad: 6
 		};
 
 		/* =================== private methods ================= */
