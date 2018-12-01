@@ -12,16 +12,14 @@ if ( ! is_active_sidebar( 'above-footer-1' ) ) {
 }
 ?>
 
-<aside id="sidebar-above-footer" class="widget-area widget-area--above-footer container">
-	<div class="row">
-		<div class="col">
-			<div class="border-top py-5">
-				<div class="row">
+<aside id="sidebar-above-footer" class="widget-area widget-area--above-footer">
+	<div class="container">
+		<div class="border-top py-5">
+			<div class="row">
 
-					<?php dynamic_sidebar( 'above-footer-1' ); ?>
+				<?php dynamic_sidebar( 'above-footer-1' ); ?>
 
-				</div>
 			</div>
-		</div>
+		</div>	
 	</div>
 </aside>

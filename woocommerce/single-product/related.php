@@ -22,10 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products products--carousel alignfull">
-		<div class="border-top py-5">
-			<h2 class="py-3 text-center"><?php esc_html_e( 'Related items', 'psf-store' ); ?></h2>
-			<div class="container">
+	<section class="related products products--carousel border-top py-5">
+		<div class="container">
+			<div class="woocommerce related_products">
+				<h2 class="py-3 text-center"><?php esc_html_e( 'Related items', 'psf-store' ); ?></h2>
 
 				<?php woocommerce_product_loop_start(); ?>
 

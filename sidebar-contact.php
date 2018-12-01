@@ -12,7 +12,7 @@ if ( ! is_active_sidebar( 'contact' ) ) {
 }
 ?>
 
-<aside id="sidebar-above-footer" class="widget-area widget-area--contact col-sm-6 my-5 pl-5">
+<aside id="sidebar-contact" class="widget-area widget-area--contact col-sm-6 my-5 pl-5">
 
 	<?php dynamic_sidebar( 'contact' ); ?>
 

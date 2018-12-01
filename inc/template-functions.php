@@ -98,13 +98,9 @@ function psf_store_footer_widgets() {
  * @since store_test 1.0.0
  */
 function psf_store_container_width() {
-	$classes = 'container';
+	$classes = '';
 
-	if ( is_page_template( 'page-templates/full--sidebar-half.php' ) 
-		|| is_shop() 
-		|| is_product_category() 
-		|| is_product_tag() 
-	) {
+	if ( is_page() || is_shop() || is_product_category() || is_product_tag() ) {
 		$classes = 'container';
 	}
 

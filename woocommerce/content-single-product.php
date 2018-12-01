@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
-	<section class="product-container">
+	<section class="product-container container">
 		<div class="py-5">
 			<div class="row">
 				<div class="col-md-7 px-0 px-md-3 pb-5 mb-4">

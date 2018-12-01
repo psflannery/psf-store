@@ -12,12 +12,10 @@ if ( ! is_active_sidebar( 'single-product-2' ) && psf_store_get_recently_viewed_
 }
 ?>
 
-<section id="sidebar-recently-viewed-product" class="products products--carousel recently alignfull">
-	<div class="border-top py-5">
-		<div class="container">
+<section id="sidebar-recently-viewed-product" class="products products--carousel recently border-top py-5">
+	<div class="container">
 
-			<?php dynamic_sidebar( 'single-product-2' ); ?>
+		<?php dynamic_sidebar( 'single-product-2' ); ?>
 
-		</div>
 	</div>
 </section>
