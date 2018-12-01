@@ -1,0 +1,18 @@
+//
+// Social Menu
+// --------------------------------------------------
+
+.jetpack-social-navigation {
+	ul {
+		width: 50%;
+		margin: 0 auto !important;
+		padding-left: $grid-gutter-width /2 !important;
+		padding-right: $grid-gutter-width /2 !important;
+		display: flex !important;
+		justify-content: space-between;
+		font-size: $font-size-lg;
+	}
+	a {
+		color: $body-color;
+	}
+}

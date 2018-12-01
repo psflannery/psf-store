@@ -177,7 +177,11 @@ function psf_store_get_header_promotions_text() {
 	}
 
 	$promo = sprintf(
-		'<div class="container header-promo"><div class="text-center py-2 px-4 border-bottom small text-muted">%1$s</div></div>',
+		'<div class="header-promo border-bottom bg-light">
+			<div class="container py-2">
+				<div class="text-center text-dark small">%1$s</div>
+			</div>
+		</div>',
 		$header_promotions_text
 	);
 

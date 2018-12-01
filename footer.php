@@ -21,6 +21,19 @@
 			<?php psf_store_footer_widgets(); ?>
 
 		</div>
+
+		<?php if ( function_exists( 'jetpack_social_menu' ) ) : ?>
+
+			<div class="container">
+				<div class="border-top py-4">
+
+					<?php jetpack_social_menu(); ?>
+
+				</div>
+			</div>
+
+		<?php endif; ?>
+
 		<div class="container">
 			<div class="site-info row">
 				<div class="col">

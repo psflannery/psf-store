@@ -96,6 +96,9 @@ if ( ! function_exists( 'psf_store_setup' ) ) :
 		
 		// Add support for responsive embeds.
 		add_theme_support( 'responsive-embeds' );
+
+		// Add support for Jetpack Social Menu.
+		add_theme_support( 'jetpack-social-menu' );
 	}
 endif;
 add_action( 'after_setup_theme', 'psf_store_setup' );

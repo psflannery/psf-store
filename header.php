@@ -82,11 +82,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="product-navigation">
+		<div class="product-navigation border-top border-bottom">
+			<div class="container position-relative">
 				<div id="offcanvas-navigation" class="navbar navbar-expand-md navbar-light navbar-offcanvas bg-white py-0">
 					<nav id="site-navigation" class="site-navigation d-flex flex-column flex-md-row" role="navigation">
-						<button class="btn btn-link px-0 py-4 border-0 align-self-end d-md-none" aria-expanded="false" aria-label="Close menu" data-toggle="offcanvas" data-target="#offcanvas-navigation" type="button">
+						<button class="btn btn-link px-0 py-4 border-0 align-self-end d-md-none" aria-expanded="false" aria-label="<?php esc_html_e( 'Close menu', 'psf-store' ); ?>" data-toggle="offcanvas" data-target="#offcanvas-navigation" type="button">
 
 							<?php echo psf_store_get_svg( array( 'icon' => 'close' ) ) ;?>
 
