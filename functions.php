@@ -42,12 +42,15 @@ if ( ! function_exists( 'psf_store_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in two locations.
+		// This theme uses wp_nav_menu() in three locations.
 		register_nav_menus( array(
 			'primary'  => esc_html__( 'Primary', 'psf-store' ),
 			'customer' => esc_html__( 'Customer', 'psf-store' ),
 			'info'     => esc_html__( 'Info', 'psf-store' ),
 		) );
+
+		// Add support for Jetpack Social Menu.
+		add_theme_support( 'jetpack-social-menu' );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -96,9 +99,6 @@ if ( ! function_exists( 'psf_store_setup' ) ) :
 		
 		// Add support for responsive embeds.
 		add_theme_support( 'responsive-embeds' );
-
-		// Add support for Jetpack Social Menu.
-		add_theme_support( 'jetpack-social-menu' );
 	}
 endif;
 add_action( 'after_setup_theme', 'psf_store_setup' );
