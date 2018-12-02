@@ -225,7 +225,7 @@
 
 		var DOM = {};
 
-		/* =================== private methods ================= */
+		// =================== private methods =================
 		function cacheDom() {
 			DOM.$window = $(window);
 			DOM.$heading = $('#primary-menu .menu-item-has-children > a');
@@ -301,7 +301,7 @@
 			$el.prepend($viewAll);
 		}
 
-		/* =================== public methods ================== */
+		// =================== public methods ==================
 		function init() {
 			cacheDom();
 			bindEvents();
@@ -311,7 +311,7 @@
 			}
 		}
 
-		/* =============== export public methods =============== */
+		// =============== export public methods ===============
 		return {
 			init: init,
 		};
@@ -327,7 +327,7 @@
 
 		var DOM = {};
 
-		/* =================== private methods ================= */
+		// =================== private methods =================
 		function cacheDom() {
 			DOM.$subMenu = $('.menu-item-has-children');
 			DOM.$menu = $('.navigation-menu > .menu-item');
@@ -336,10 +336,11 @@
 
 		function bindEvents() {
 			if( screenLessThan( breakpoints.screen_md ) ) {
-				DOM.$subMenu.off('hover');
+				DOM.$subMenu.off('mouseenter');
 				DOM.$menu.off('mouseleave');
 			} else {
-				DOM.$subMenu.on('hover', function() {
+				//DOM.$subMenu.on('hover', function() {
+				DOM.$subMenu.on('mouseenter', function() {
 					var $sub = $(this).find('.sub-menu'),
 						menuHeight = $sub.height() + 79; //55
 
@@ -352,13 +353,13 @@
 			}			
 		}
 
-		/* =================== public methods ================== */
+		// =================== public methods ==================
 		function init() {
 			cacheDom();
 			bindEvents();
 		}
 
-		/* =============== export public methods =============== */
+		// =============== export public methods ===============
 		return {
 			init: init,
 		};
