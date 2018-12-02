@@ -7,6 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package Store_test
+ * @see     https://bjornjohansen.no/wordpress-menu-cache
  */
 
 ?>
@@ -22,7 +23,7 @@
 
 		</div>
 
-		<?php if ( function_exists( 'jetpack_social_menu' ) ) : ?>
+		<?php if ( function_exists( 'jetpack_social_menu' ) && has_nav_menu( 'jetpack-social-menu' ) ) : ?>
 
 			<div class="container">
 				<div class="border-top py-4">
@@ -35,9 +36,9 @@
 		<?php endif; ?>
 
 		<div class="container">
-			<div class="site-info row">
-				<div class="col">
-					<div class="small border-top pt-3 text-muted d-flex justify-content-between">
+			<div class="border-top pt-3">
+				<div class="site-info row">
+					<div class="col small text-muted d-flex justify-content-between">
 						<p>
 						<?php 
 							esc_html_e( '&copy;', 'psf-store' );
