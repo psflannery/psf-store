@@ -4,13 +4,16 @@
 
 .jetpack-social-navigation {
 	ul {
-		width: 50%;
+		width: 100%;
 		margin: 0 auto !important;
 		padding-left: $grid-gutter-width /2 !important;
 		padding-right: $grid-gutter-width /2 !important;
 		display: flex !important;
-		justify-content: space-between;
+		justify-content: space-around;
 		font-size: $font-size-lg;
+		@include media-breakpoint-up(md) {
+			width: 50%
+		}
 	}
 	a {
 		color: $body-color;

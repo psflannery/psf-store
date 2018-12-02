@@ -7034,13 +7034,14 @@ div.sharedaddy h3.sd-title {
   width: 100%;
   height: 100%;
   background: #fff;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  z-index: 99999; }
+  z-index: 1080; }
   .flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit {
     display: block; }
   .flickity-enabled.is-fullscreen .flickity-fullscreen-button-view {
     display: none; }
+  .flickity-enabled.is-fullscreen .woocommerce-product-gallery__image img {
+    height: 90vh;
+    width: auto; }
 
 html.is-flickity-fullscreen {
   overflow: hidden; }
@@ -8136,13 +8137,16 @@ p.stars.selected a:not(.active):before {
   margin-right: 0.5rem; }
 
 .jetpack-social-navigation ul {
-  width: 50%;
+  width: 100%;
   margin: 0 auto !important;
   padding-left: 15px !important;
   padding-right: 15px !important;
   display: flex !important;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 1.25rem; }
+  @media (min-width: 768px) {
+    .jetpack-social-navigation ul {
+      width: 50%; } }
 
 .jetpack-social-navigation a {
   color: #212529; }

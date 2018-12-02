@@ -182,14 +182,16 @@
 	top: 0;
 	@include size(100%);
 	background: $white;
-	padding-top: $spacer * 2;
-	padding-bottom: $spacer * 2;
-	z-index: 99999;
+	z-index: $zindex-flickity-fullscreen;
 	.flickity-fullscreen-button-exit { 
 		display: block;
 	}
 	.flickity-fullscreen-button-view {
 		display: none; 
+	}
+	.woocommerce-product-gallery__image img {
+		height: 90vh;
+		width: auto;
 	}
 }
 
