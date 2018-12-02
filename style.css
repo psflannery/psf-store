@@ -6708,7 +6708,7 @@ label {
   vertical-align: middle;
   fill: #000; }
   .icon:hover, .icon:focus {
-    fill: rgba(0, 0, 0, 0.5); }
+    fill: #495057; }
   .icon.disabled {
     color: rgba(0, 0, 0, 0.3); }
 
@@ -8149,5 +8149,8 @@ p.stars.selected a:not(.active):before {
       width: 50%; } }
 
 .jetpack-social-navigation a {
-  color: #212529; }
+  color: #212529;
+  transition: color 0.2s ease; }
+  .jetpack-social-navigation a:hover, .jetpack-social-navigation a:focus {
+    color: #495057; }
 /*# sourceMappingURL=style.css.map */

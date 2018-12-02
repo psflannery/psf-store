@@ -17,5 +17,9 @@
 	}
 	a {
 		color: $body-color;
+		transition: color 0.2s ease;
+		@include hover-focus{
+			color: $icon-active-color;
+		};
 	}
 }
