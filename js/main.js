@@ -327,11 +327,16 @@
 
 		var DOM = {};
 
+		var ClassName = {
+			IN: 'in',
+		};
+
 		// =================== private methods =================
 		function cacheDom() {
 			DOM.$subMenu = $('.menu-item-has-children');
 			DOM.$menu = $('.navigation-menu > .menu-item');
 			DOM.$menuMask = $('.menu-mask');
+			DOM.$overlay = $('.site-content-overlay');
 		}
 
 		function bindEvents() {
@@ -339,16 +344,17 @@
 				DOM.$subMenu.off('mouseenter');
 				DOM.$menu.off('mouseleave');
 			} else {
-				//DOM.$subMenu.on('hover', function() {
 				DOM.$subMenu.on('mouseenter', function() {
 					var $sub = $(this).find('.sub-menu'),
 						menuHeight = $sub.height() + 79; //55
 
-					DOM.$menuMask.height( menuHeight ).show();
+					DOM.$menuMask.height( menuHeight ).addClass(ClassName.IN);
+					DOM.$overlay.addClass(ClassName.IN);
 				});
 
 				DOM.$menu.on('mouseleave', function() {
-					DOM.$menuMask.hide();
+					DOM.$menuMask.removeClass(ClassName.IN);
+					DOM.$overlay.removeClass(ClassName.IN);
 				});
 			}			
 		}
@@ -390,7 +396,7 @@
 			lazyLoad: 6
 		};
 
-		/* =================== private methods ================= */
+		// =================== private methods =================
 		function cacheDom() {
 			DOM.$carousel = $('.carousel');
 			DOM.$carouselWrap = $('.carousel-wrap');
@@ -429,7 +435,7 @@
 			$carouselNav.flickity($carouselNavOptions);
 		}
 
-		/* =================== public methods ================== */
+		// =================== public methods ==================
 		function init() {
 			cacheDom();
 			createThumbs();
@@ -443,7 +449,7 @@
 			DOM.$cellImage.unwrap();
 		}
 
-		/* =============== export public methods =============== */
+		// =============== export public methods ===============
 		return {
 			init: init,
 		};
@@ -568,7 +574,7 @@
 
 		var isSearchVisible = false;
 
-		/* =================== private methods ================= */
+		// =================== private methods =================
 		function cacheDom() {
 			DOM.$trigger = $('[data-toggle="search"]');
 		}
@@ -595,13 +601,13 @@
 			}
 		}
 
-		/* =================== public methods ================== */
+		// =================== public methods ==================
 		function init() {
 			cacheDom();
 			bindEvents();
 		}
 
-		/* =============== export public methods =============== */
+		// =============== export public methods ===============
 		return {
 			init: init,
 		};
@@ -619,7 +625,7 @@
 
 		var isOpen = false;
 
-		/* =================== private methods ================= */
+		// =================== private methods =================
 		function cacheDom() {
 			DOM.$accordionPanel = $('.filter-collapse');
 			DOM.$accordionContent = $('.accordion-filter__content'); 
@@ -643,13 +649,13 @@
 			});
 		}
 
-		/* =================== public methods ================== */
+		// =================== public methods ==================
 		function init() {
 			cacheDom();
 			bindEvents();
 		}
 
-		/* =============== export public methods =============== */
+		// =============== export public methods ===============
 		return {
 			init: init,
 		};
@@ -665,7 +671,7 @@
 			ACTIVE: 'checkout--active',
 		};
 
-		/* =================== private methods ================= */
+		// =================== private methods =================
 		function cacheDom() {
 			DOM.$body = $('body');
 			DOM.$checkout = $('.site-header-cart');
@@ -700,13 +706,13 @@
 			DOM.$checkoutIcon.tooltip('enable');
 		}
 
-		/* =================== public methods ================== */
+		// =================== public methods ==================
 		function init() {
 			cacheDom();
 			bindEvents();
 		}
 
-		/* =============== export public methods =============== */
+		// =============== export public methods ===============
 		return {
 			init: init,
 		};
@@ -722,7 +728,7 @@
 			IN: 'in',
 		};
 
-		/* =================== private methods ================= */
+		// =================== private methods =================
 		function cacheDom() {
 			DOM.$window = $(window);
 			DOM.$stickyAddToCart = $('.sticky-add-to-cart');
@@ -777,7 +783,7 @@
 			}
 		}
 
-		/* =================== public methods ================== */
+		// =================== public methods ==================
 		function init() {
 			cacheDom();
 			
@@ -790,7 +796,7 @@
 			getProductId();
 		}
 
-		/* =============== export public methods =============== */
+		// =============== export public methods ===============
 		return {
 			init: init,
 		};
