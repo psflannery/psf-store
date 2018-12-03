@@ -101,7 +101,7 @@ function psf_store_container_width() {
 	$classes = '';
 
 	if ( is_page() || is_shop() || is_product_category() || is_product_tag() ) {
-		$classes = 'container';
+		$classes = 'containerx';
 	}
 
 	return $classes;
@@ -192,11 +192,11 @@ if ( ! function_exists( 'psf_store_login_page_open' ) ) {
 	 */
 	function psf_store_login_page_open() {
 		if( is_user_logged_in() ) {
-			echo '<main id="main" class="site-main pb-5 my-5">';
-		} else {
-			echo '<main id="main" class="site-main pb-5 my-5 row">';
-			echo '<div class="col-md-4 mx-auto card">';
+			return;
 		}
+		
+		echo '<div class="row">';
+		echo '<div class="col-md-4 mx-auto card">';
 	}
 }
 add_action( 'before-login-page', 'psf_store_login_page_open', 10 );
@@ -213,11 +213,11 @@ if ( ! function_exists( 'psf_store_login_page_close' ) ) {
 	 */
 	function psf_store_login_page_close() {
 		if( is_user_logged_in() ) {
-			echo '</main>';
-		} else {
-			echo '</div><!-- .col-md-4 .mx-auto -->';
-			echo '</main>';
+			return;
 		}
+		
+		echo '</div>';
+		echo '</div>';
 	}
 }
 add_action( 'after-login-page', 'psf_store_login_page_close', 10 );

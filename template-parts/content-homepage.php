@@ -9,18 +9,20 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<section class="container">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php
-	psf_store_post_thumbnail();
+		<?php
+		psf_store_post_thumbnail();
 
-	/**
-	 * Functions hooked in to storefront_page add_action
-	 *
-	 * @hooked psf_store_homepage_header      - 10
-	 * @hooked psf_store_page_content         - 20
-	 */
-	do_action( 'psf_store_homepage' );
-	?>
-		
-</div>
+		/**
+		 * Functions hooked in to storefront_page add_action
+		 *
+		 * @hooked psf_store_homepage_header      - 10
+		 * @hooked psf_store_page_content         - 20
+		 */
+		do_action( 'psf_store_homepage' );
+		?>
+			
+	</article>
+</section>

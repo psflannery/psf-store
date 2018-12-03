@@ -63,7 +63,7 @@ if ( ! function_exists( 'psf_store_product_categories' ) ) {
 		 * Only display the section if the shortcode returns product categories
 		 */
 		if ( false !== strpos( $shortcode_content, 'product-category' ) ) {
-			echo '<section class="storefront-product-section storefront-product-categories" aria-label="' . esc_attr__( 'Product Categories', 'psf-store' ) . '">';
+			echo '<section class="storefront-product-section storefront-product-categories container" aria-label="' . esc_attr__( 'Product Categories', 'psf-store' ) . '">';
 			echo '<div class="pt-5 border-top">';
 			
 			do_action( 'psf_store_homepage_before_product_categories' );
@@ -120,7 +120,7 @@ if ( ! function_exists( 'psf_store_on_sale_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-on-sale-products" aria-label="' . esc_attr__( 'On Sale Products', 'psf-store' ) . '">';
+			echo '<section class="storefront-product-section storefront-on-sale-products container" aria-label="' . esc_attr__( 'On Sale Products', 'psf-store' ) . '">';
 			echo '<div class="pt-5 border-top">';
 			
 			do_action( 'psf_store_homepage_before_on_sale_products' );
@@ -175,7 +175,7 @@ if ( ! function_exists( 'psf_store_recent_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-recent-products" aria-label="' . esc_attr__( 'Recent Products', 'psf-store' ) . '">';
+			echo '<section class="storefront-product-section storefront-recent-products container" aria-label="' . esc_attr__( 'Recent Products', 'psf-store' ) . '">';
 			echo '<div class="pt-5 border-top">';
 			
 			do_action( 'psf_store_homepage_before_recent_products' );
@@ -232,7 +232,7 @@ if ( ! function_exists( 'psf_store_featured_products' ) ) {
 		 * Only display the section if the shortcode returns products
 		 */
 		if ( false !== strpos( $shortcode_content, 'product' ) ) {
-			echo '<section class="storefront-product-section storefront-featured-products" aria-label="' . esc_attr__( 'Featured Products', 'psf-store' ) . '">';
+			echo '<section class="storefront-product-section storefront-featured-products container" aria-label="' . esc_attr__( 'Featured Products', 'psf-store' ) . '">';
 			echo '<div class="pt-5 border-top">';
 
 			do_action( 'psf_store_homepage_before_featured_products' );
@@ -284,7 +284,7 @@ if ( ! function_exists( 'psf_store_featured_products_slideshow' ) ) {
 
 		if ( $loop->have_posts() ) :
 
-			echo '<section class="storefront-product-section storefront-featured-products-slides" aria-label="' . esc_attr__( 'Featured Products Slides', 'psf-store' ) . '">';
+			echo '<section class="storefront-product-section storefront-featured-products-slides container" aria-label="' . esc_attr__( 'Featured Products Slides', 'psf-store' ) . '">';
 			echo '<div class="pt-5 border-top">';
 
 			do_action( 'before_psf_featured_product_slideshow' );
@@ -442,7 +442,7 @@ if ( ! function_exists( 'psf_store_sorting_wrapper_open' ) ) {
 	 * @since store_test 1.0.0
 	 */
 	function psf_store_sorting_wrapper_open() {
-		echo '<div class="store__sortable mt-3 d-flex justify-content-between align-items-center small text-muted">';
+		echo '<div class="store__sortable mt-3 d-flex justify-content-between align-items-center small text-muted container">';
 	}
 }
 
@@ -459,6 +459,32 @@ if ( ! function_exists( 'psf_store_sorting_wrapper_close' ) ) {
 	}
 }
 
+if ( ! function_exists( 'psf_store_archive_product_container_open' ) ) {
+	/**
+	 * Archive product container open
+	 * 
+	 * @return void
+	 *
+	 * @since store_test 1.0.2
+	 */
+	function psf_store_archive_product_container_open() {
+		echo '<div class="container">';
+	}
+}
+
+if ( ! function_exists( 'psf_store_archive_product_container_close' ) ) {
+	/**
+	 * Archive product container close
+	 * 
+	 * @return void
+	 *
+	 * @since store_test 1.0.2
+	 */
+	function psf_store_archive_product_container_close() {
+		echo '</div>';
+	}
+}
+
 if ( ! function_exists( 'psf_store_product_filter_wrap_open' ) ) {
 	/**
 	 * Product filter wrapper open.
@@ -468,7 +494,7 @@ if ( ! function_exists( 'psf_store_product_filter_wrap_open' ) ) {
 	 * @since store_test 1.0.0
 	 */
 	function psf_store_product_filter_wrap_open() {
-		echo '<div class="mb-3 xxx">';
+		echo '<div class="mb-3">';
 	}
 }
 

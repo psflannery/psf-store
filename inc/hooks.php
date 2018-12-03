@@ -32,10 +32,6 @@ function psf_store_post_classes( $classes, $class, $post_id ) {
     if ( is_page_template( 'page-templates/template-login.php' ) && ! is_user_logged_in() ) {
     	$classes[] = 'card-body py-0';
     }
-
-    if ( is_page_template( 'page-templates/template-homepage.php' ) ) {
-    	$classes[] = 'pb-5';
-    }
         
     return $classes;
 }

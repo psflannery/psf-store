@@ -15,18 +15,22 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area row">
-		<main id="main" class="site-main pb-5 col-md-8 mx-auto my-5">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main container">
+			<div class="row pb-5 my-5">
+				<div class="col-md-8 mx-auto">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+				<?php
+				while ( have_posts() ) :
+					the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+					get_template_part( 'template-parts/content', 'page' );
 
-		endwhile;
-		?>
+				endwhile;
+				?>
 
+				</div>
+			</div>
 		</main>
 	</div>
 

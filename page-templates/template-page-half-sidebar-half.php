@@ -9,25 +9,26 @@
 
 get_header(); 
 ?>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main container">
+			<div class="row my-5">
+				<div class="col-md-6 border-right pr-md-5">
 
-	<div class="row">
-		<div id="primary" class="content-area col-sm-6 border-right my-5 pr-5">
-			<main id="main" class="site-main">
+					<?php
+					while ( have_posts() ) :
+						the_post();
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
+						get_template_part( 'template-parts/content', 'page' );
 
-				get_template_part( 'template-parts/content', 'page' );
+					endwhile;
+					?>
 
-			endwhile;
-			?>
+				</div>
 
-			</main>
-		</div>
+				<?php get_sidebar( 'contact' ); ?>
 
-		<?php get_sidebar( 'contact' ); ?>
-
+			</div>
+		</main>
 	</div>
 
 <?php

@@ -13,20 +13,24 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+		<main id="main" class="site-main container">
+			<div class="pb-5 my-5 ">
 
-		<?php 
-		do_action( 'before-login-page' );
+			<?php 
+			do_action( 'before-login-page' );
 
-			while ( have_posts() ) :
-				the_post();
+				while ( have_posts() ) :
+					the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+					get_template_part( 'template-parts/content', 'page' );
 
-			endwhile;
+				endwhile;
 
-		do_action( 'after-login-page' );
-		?>
+			do_action( 'after-login-page' );
+			?>
 		
+			</div>
+		</main>
 	</div>
 
 <?php

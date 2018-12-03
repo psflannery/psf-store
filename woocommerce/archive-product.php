@@ -60,6 +60,7 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_result_count - 20
 	 * @hooked psf_store_sorting_wrapper_close - 25
 	 * @hooked woocommerce_output_all_notices - 30
+	 * @hooked psf_store_archive_product_container_open - 99
 	 */
 	do_action( 'woocommerce_before_shop_loop' );
 	woocommerce_product_loop_start();
@@ -83,6 +84,7 @@ if ( woocommerce_product_loop() ) {
 	/**
 	 * Hook: woocommerce_after_shop_loop.
 	 *
+	 * @hooked psf_store_archive_product_container_close - 1
 	 * @hooked woocommerce_pagination - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop' );
