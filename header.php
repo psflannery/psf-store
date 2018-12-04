@@ -132,4 +132,4 @@
 	 */
 	do_action('before_content'); ?>
 
-	<div id="content" class="site-content site-content-overlay <?php echo apply_filters( 'psf_store_container_class', '' ); ?>">
+	<div id="content" class="site-content site-content-overlay">

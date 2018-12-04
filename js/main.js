@@ -180,12 +180,12 @@
 					return;
 				}
 
-				DOM.$body.append('<div id="overlay" class="offcanvas-overlay fixed-fs offcanvas--overlay" data-toggle="offcanvas" data-target="' + DOM.$trigger.attr('data-target') + '"></div>');
+				//DOM.$body.append('<div id="overlay" class="offcanvas-overlay fixed-fs offcanvas--overlay" data-toggle="offcanvas" data-target="' + DOM.$trigger.attr('data-target') + '"></div>');
 			} else {
 				stopScroll( false, DOM.$body );
 				DOM.$trigger.removeClass(ClassName.ACTIVE).attr('aria-expanded', 'false');
 				$target.removeClass(ClassName.IN);
-				$overlay.remove();
+				//$overlay.remove();
 			}
 
 			// remove animation class

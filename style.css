@@ -7425,7 +7425,6 @@ html.is-flickity-fullscreen {
     .site-navigation .menu-item-has-children:hover > ul, .site-navigation .menu-item-has-children:focus-within > ul {
       visibility: visible;
       opacity: 1;
-      display: block;
       z-index: 1; }
     .site-navigation .menu-item-has-children:hover:after {
       -webkit-transform: scaleX(1);
@@ -7444,9 +7443,9 @@ html.is-flickity-fullscreen {
       background-color: #000;
       -webkit-transform-origin: bottom center;
               transform-origin: bottom center;
-      transition: -webkit-transform 0.25s ease-out 0.1s;
-      transition: transform 0.25s ease-out 0.1s;
-      transition: transform 0.25s ease-out 0.1s, -webkit-transform 0.25s ease-out 0.1s; } }
+      transition: -webkit-transform 0.25s ease-out 100ms;
+      transition: transform 0.25s ease-out 100ms;
+      transition: transform 0.25s ease-out 100ms, -webkit-transform 0.25s ease-out 100ms; } }
 
 @media (max-width: 767.98px) {
   .site-navigation .menu-item-has-children > ul {
@@ -7458,7 +7457,6 @@ html.is-flickity-fullscreen {
 
 @media (min-width: 768px) {
   .site-navigation .menu-item-has-children > ul {
-    display: none;
     padding-left: 0;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -7466,33 +7464,12 @@ html.is-flickity-fullscreen {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    transition: all 0.5s ease;
+    transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
     left: 0;
     min-width: 250px; } }
 
 .site-navigation .sub-menu {
-  font-size: 0.875rem;
-  /*
-	@include media-breakpoint-up(md) {
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			top: $menu-triangle-position-top;
-		}
-		&::before {
-			border-top: $menu-triangle-size solid $border-color-dark; //theme-color("dark");
-			border-left: $menu-triangle-size solid transparent;
-			border-right: $menu-triangle-size solid transparent;
-			left: $menu-triangle-position-left;
-		}
-		&::after {
-			border-top: ($menu-triangle-size - 1) solid $body-bg;
-			border-left: ($menu-triangle-size - 1) solid transparent;
-			border-right: ($menu-triangle-size - 1) solid transparent;
-    		left: calc(1.5rem + 1px);
-		}
-	}*/ }
+  font-size: 0.875rem; }
 
 @media (max-width: 767.98px) {
   .site-navigation .menu-item-has-children > a {
@@ -7502,9 +7479,9 @@ html.is-flickity-fullscreen {
       content: '+';
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg);
-      transition: -webkit-transform 0.2s ease;
-      transition: transform 0.2s ease;
-      transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+      transition: -webkit-transform 200ms ease;
+      transition: transform 200ms ease;
+      transition: transform 200ms ease, -webkit-transform 200ms ease;
       -webkit-transform-origin: center;
               transform-origin: center; } }
 
@@ -7542,28 +7519,31 @@ html.is-flickity-fullscreen {
     max-width: 1000%;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.1s ease-out 0.1s; }
+    transition: all 100ms ease-out 100ms; }
     .menu-mask.in {
       opacity: 1;
       visibility: visible; } }
 
+.product-navigation {
+  z-index: 901; }
+
 .site-content-overlay {
   position: relative; }
   .site-content-overlay:after {
-    transition: opacity 0.1s ease-out 0.1s;
+    transition: opacity 100ms ease-out 100ms;
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
     opacity: 0;
     pointer-events: none; }
   .site-content-overlay.in:after {
     opacity: 1;
-    transition-delay: 0.2s; }
+    transition-delay: 200ms; }
 
 .woocommerce-pagination .current {
   z-index: 1;
@@ -8030,10 +8010,6 @@ p.stars.selected a:not(.active):before {
 
 .navbar-offcanvas .navbar-default.navbar-offcanvas {
   background-color: #fff; }
-
-.offcanvas--overlay {
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1040; }
 
 .contact-form .form-group textarea {
   height: 10rem; }

@@ -13,36 +13,33 @@
 	left: $spacer;
 	right: $spacer;
 	> form {
-		transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: opacity $menu-transition-timing-base $menu-easing-in;
 		opacity: 0;
 		z-index: -1;
 		height: 100%;
 	}
 	input::placeholder {
 		transform: translateY($spacer);
-		transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 100ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: transform $menu-transition-timing-slow $menu-easing-in, opacity $menu-transition-timing-base $menu-easing-in;
 		user-select: none;
 		opacity: 0;
-		//font-size: $font-size-sm;
 	}
 	.icon-search {
-		//position: relative;
-		//right: -25px; //-50%;
 		position: absolute;
 		opacity: 1;
 		visibility: visible;
-		transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: opacity $menu-transition-timing-base $menu-easing-in;
 	}
 	.icon-close {
 		opacity: 0;
 		visibility: hidden;
-		transition: transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: transform $menu-transition-timing-base $menu-easing-in;
 		transform: rotate(-45deg);
 		transform-origin: center;
 	}
 	&.in {
 		> form {
-			transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1);
+			transition: opacity $menu-transition-timing-base $menu-easing-in;
 			opacity: 1;
 			z-index: 6;
 			> input {
@@ -123,7 +120,6 @@
 			> ul {
 				visibility: visible;
 				opacity: 1;
-				display: block;
 				z-index: 1;
 			}
 		}
@@ -143,7 +139,7 @@
 			left: 0;
 			background-color: $black;
 			transform-origin: bottom center;
-			transition: transform 0.25s ease-out 0.1s;
+			transition: transform 0.25s ease-out $menu-transition-timing-base;
 		}
 	}
 }
@@ -157,42 +153,20 @@
 		}
 	}
 	@include media-breakpoint-up(md) {
-		display: none;
 		padding-left: 0;
-		padding-top: 2.5rem;
-		padding-bottom: 2.5rem;
+		padding-top: $spacer * 2.5;
+		padding-bottom: $spacer * 2.5;
 		list-style: none;
 		visibility: hidden;
 		opacity: 0;
 		position: absolute;
-		transition: all 0.5s ease;
+		transition: all $menu-transition-timing-base $menu-easing-in $menu-transition-timing-base;
 		left: 0;
 		min-width: 250px;
 	}
 }
 .site-navigation .sub-menu {
 	font-size: $font-size-sm;
-	/*
-	@include media-breakpoint-up(md) {
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			top: $menu-triangle-position-top;
-		}
-		&::before {
-			border-top: $menu-triangle-size solid $border-color-dark; //theme-color("dark");
-			border-left: $menu-triangle-size solid transparent;
-			border-right: $menu-triangle-size solid transparent;
-			left: $menu-triangle-position-left;
-		}
-		&::after {
-			border-top: ($menu-triangle-size - 1) solid $body-bg;
-			border-left: ($menu-triangle-size - 1) solid transparent;
-			border-right: ($menu-triangle-size - 1) solid transparent;
-    		left: calc(#{$menu-triangle-position-left} + 1px);
-		}
-	}*/
 }
 .site-navigation .menu-item-has-children > a {
 	@include media-breakpoint-down(sm) {
@@ -201,7 +175,7 @@
 		&::after {
 			content: '+';
 			transform: rotate(0deg);
-			transition: transform 0.2s ease;
+			transition: transform $menu-transition-timing-base * 2 ease;
 			transform-origin: center;
 		}
 	}
@@ -241,33 +215,35 @@
 		@include alignfull();
 		opacity: 0;
 		visibility: hidden;
-		transition: all 0.1s ease-out 0.1s;
+		transition: all $menu-transition-timing-base ease-out $menu-transition-timing-base;
 		&.in {
 			opacity: 1;
 			visibility: visible;
 		}
 	}
 }
+.product-navigation {
+	z-index: $zindex-product-navigation;
+}
 .site-content-overlay {
 	position: relative;
 	&:after {
-		transition: opacity 0.1s ease-out 0.1s;
+		transition: opacity $menu-transition-timing-base ease-out $menu-transition-timing-base;
 		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba($black, .75);
-		//z-index: 10;
-		z-index: 0;
+		background: rgba($black, .5);
+		z-index: $zindex-content-overlay;
 		opacity: 0;
 		pointer-events: none;		
 	}
 	&.in {
 		&:after {
 			opacity: 1;
-			transition-delay: 0.2s;
+			transition-delay: $menu-transition-timing-base * 2;
 		}
 	}
 }

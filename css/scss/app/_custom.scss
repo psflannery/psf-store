@@ -63,6 +63,8 @@ $card-cap-bg:                       #fff;
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 
+$zindex-content-overlay:            900;
+$zindex-product-navigation:         $zindex-content-overlay + 1;
 $zindex-dropdown:                   1000;
 $zindex-sticky:                     1020;
 $zindex-fixed:                      1030;

@@ -52,10 +52,11 @@ $custom-logo-height                       : $display4-size;
 $custom-logo-height-md                    : $display3-size;
 
 // Main menu
-$menu-triangle-size                       : 15px;
-$menu-triangle-position-top               : 0; //$navbar-padding-y;
-$menu-triangle-position-left              : $navbar-nav-link-padding-x;
 $menu-z-index                             : 1;
+$menu-easing-in                           : cubic-bezier(0.4, 0, 0.2, 1);
+$menu-easing-out                          : cubic-bezier(0.4, 0, 0.2, 1);
+$menu-transition-timing-base              : 100ms;
+$menu-transition-timing-slow              : 150ms;
 
 // Offcanvas menu
 $offcanvas-width                          : 100%;

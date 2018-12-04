@@ -91,24 +91,6 @@ function psf_store_footer_widgets() {
 }
 
 /**
- * Set page container width
- * 
- * @return string container class.
- *
- * @since store_test 1.0.0
- */
-function psf_store_container_width() {
-	$classes = '';
-
-	if ( is_page() || is_shop() || is_product_category() || is_product_tag() ) {
-		$classes = 'containerx';
-	}
-
-	return $classes;
-}
-add_filter( 'psf_store_container_class', 'psf_store_container_width' );
-
-/**
  * Comments wrapper open
  *
  * @return void
