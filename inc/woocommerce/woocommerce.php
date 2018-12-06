@@ -51,7 +51,7 @@ add_filter( 'woocommerce_get_image_size_single', 'psf_store_woocommerce_image_si
  * @return array       Array of dimensions.
  *
  * @since store_test 1.0.2
- */
+ *
 function psf_store_woocommerce_image_size_thumbnail( $size ) {
 	$size = array(
 		'width'  => 200,
@@ -62,6 +62,7 @@ function psf_store_woocommerce_image_size_thumbnail( $size ) {
 	return $size;
 }
 add_filter( 'woocommerce_get_image_size_thumbnail', 'psf_store_woocommerce_image_size_thumbnail' );
+*/
 
 /**
  * WooCommerce specific scripts & stylesheets.
