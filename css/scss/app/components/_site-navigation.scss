@@ -223,7 +223,10 @@
 	}
 }
 .product-navigation {
-	z-index: $zindex-product-navigation;
+	z-index: initial;
+	@include media-breakpoint-up(md) {
+		z-index: $zindex-product-navigation;
+	}
 }
 .site-content-overlay {
 	position: relative;

@@ -13,10 +13,10 @@
 		transition: transform 0.3s ease-out;
 		transform: translateX(-100%);
 		-webkit-overflow-scrolling: touch;
-		z-index: $zindex-offcanvas-backdrop + 1;
 	}
 	&.in {
 		align-items: flex-start;
+		z-index: 1001;
 		@include media-breakpoint-down(sm) {
 			transform: translateX(0);
 			box-shadow: $box-shadow;
@@ -26,7 +26,3 @@
 		background-color: $body-bg; 
 	}
 }
-//.offcanvas--overlay {
-//	background-color: rgba($black, 0.2);
-//	z-index: $zindex-offcanvas-backdrop;
-//}
