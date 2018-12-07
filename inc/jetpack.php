@@ -63,6 +63,21 @@ function psf_store_infinite_scroll_render() {
 	do_action( 'psf_store_jetpack_infinite_scroll_after' );
 }
 
+/**
+ * Adds container to content appended by Jetpack infinite scroll
+ *
+ * @return void
+ *
+ * @since store_test 1.0.4
+ */
+function jetpack_infinite_scroll_container() {
+	add_action( 'psf_store_jetpack_product_infinite_scroll_before', 'psf_store_archive_product_container_open' );
+	add_action( 'psf_store_jetpack_product_infinite_scroll_after', 'psf_store_archive_product_container_close' );
+}
+if ( psf_store_is_woocommerce_activated() ) {
+	add_action( 'init', 'jetpack_infinite_scroll_container' );
+}
+
 
 // Lazy Load
 // ------------------------------------------------------------
