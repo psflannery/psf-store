@@ -16,7 +16,7 @@
  *
  * @package Store_test
  * 
- * @since store_test 1.0.0
+ * @since store_test 1.0.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
