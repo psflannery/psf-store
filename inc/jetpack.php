@@ -82,7 +82,7 @@ if ( psf_store_is_woocommerce_activated() ) {
 // Lazy Load
 // ------------------------------------------------------------
 /**
- * Exclude Image From Jetpack Lazyload
+ * Exclude classes From Jetpack Lazyload
  * 
  * @param  array $blacklisted_classes  Array of strings where each string is a class
  * @return array                       Classes to exclude from Jetpack Lazyload
