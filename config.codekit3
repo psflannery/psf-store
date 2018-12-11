@@ -4800,6 +4800,13 @@
 		"oAP": "/woocommerce/loop/orderby.php",
 		"oF": 0
 		},
+	"/woocommerce/loop/pagination.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/woocommerce/loop/pagination.php",
+		"oF": 0
+		},
 	"/woocommerce/myaccount/form-edit-account.php": {
 		"cB": 0,
 		"ft": 8192,
